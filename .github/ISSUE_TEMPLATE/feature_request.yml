@@ -1,0 +1,23 @@
+name: Feature request
+
+## What is missing
+
+Describe the gap. If something cannot be decoded or generated today, say which
+family and which byte.
+
+## Why it matters
+
+What would you do with it? A concrete use case helps more than a general wish.
+
+## Proposed behaviour
+
+What should the program do?
+
+## Scope
+
+Keep one topic per request. Data additions for an existing family are best raised
+as a bug report against that family, or as a pull request against the dataset.
+
+## Additional context
+
+Links to scans, label files, clubvw threads or vagcode records are welcome.

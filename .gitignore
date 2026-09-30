@@ -1,35 +1,16 @@
-# Bagimliliklar
 node_modules/
-
-# Derleme ciktilari
 dist/
 release/
-node_modules/.vite/
-node_modules/.vitest/
-
-# Ekran goruntuleri
 shots/
-
-# Veri toplama onbellegi
 cache/
-
-# Gunlukler
 *.log
 npm-debug.log*
-yarn-error.log*
-
-# Editor / isletim sistemi
-.vscode/
-.idea/
 .DS_Store
 Thumbs.db
-*.swp
-
-# Ortam degiskenleri
+.vscode/
+.idea/
 .env
 .env.local
-
-# Imza sertifikalari (ozel anahtar - ASLA commit edilmez)
 *.pfx
 *.p12
 *.cer

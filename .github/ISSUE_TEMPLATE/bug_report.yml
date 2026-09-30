@@ -1,0 +1,39 @@
+name: Bug report
+
+**Before you file this:** please mask the VIN. Do not post a full vehicle
+identification number in a public issue.
+
+## Module
+
+- Family / platform code (e.g. `5Q0`, `1K0`):
+- Part number (e.g. `5Q0 614 517 DG`):
+- Hardware (HW) and software (SW) version:
+- Byte length of the coding:
+
+## Vehicle
+
+- Brand and model:
+- Model year:
+- Drivetrain (FWD / AWD / RWD):
+
+## What happened
+
+What you did, what you expected, and what happened instead.
+
+- Coding you entered (VIN masked):
+- Which tab (Decode / Generate / VIN / Dataset):
+
+```
+Paste the coding here, VIN masked
+```
+
+## Information
+
+- OS and version:
+- Application version:
+- Screenshot, if relevant:
+
+## Notes
+
+Is there a repair-shop log, VCDS/ODIS scan or label-file reference that documents
+the original coding of this module? A link helps more than a description.

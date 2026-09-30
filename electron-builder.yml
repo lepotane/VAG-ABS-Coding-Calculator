@@ -12,6 +12,9 @@ files:
 asar: true
 asarUnpack:
   - src/data/*.json
+
+# SignPath sonrasi imzalama (yorum satirini kaldirinca aktiflesir):
+# afterSign: scripts/sign.js
 win:
   # Gelistirici Modu kapali oldugu icin winCodeSign araci (rcedit) sembolik
   # bag ile acilamiyor. Bu yuzden meta veri duzenlemesi kapatilir ve

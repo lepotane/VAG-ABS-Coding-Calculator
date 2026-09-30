@@ -1,43 +1,61 @@
 # VAG ABS Coding Calculator v1-beta.1
 
-VAG grubu ABS / ESP ünitelerinin uzun kodlamasını çözümleyen ve üreten masaüstü uygulaması.
+Desktop application that reads and generates ABS/ESP long coding for VAG vehicles.
+Windows, macOS and Linux. Fully offline.
 
-## Bu sürümde
+## In this release
 
-- **13 modül ailesi**, 326 gerçek araç koduyla doğrulandı
-- Ayna (mirror) kuralları her ailede gerçek araçlarla sınandı — toplam **%99,95** tutarlılık
-- VIN ofsetleri ve bayt rolleri gözlem verisinden türetildi, elle yazılmış sabitler yok
-- Donör kodu vermeden de kod üretimi: bilinmeyen baytlar **en sık** değerle doldurulur ve kaynağı raporlanır
-- Türkçe / İngilizce arayüz
-- Windows kurulum ve taşınabilir sürüm; EXE'ler dijital olarak imzalı ve zaman damgalı
+- **13 module families**, validated against **326 real vehicle codes**
+- Mirror rules verified per family against real vehicles — **99.95 %** overall consistency
+- Byte lengths, mirror maps, VIN offsets and byte roles **derived from observed data**, not hard-coded
+- Code generation **works without a donor code**: unresolved bytes are filled from the most frequently observed value and every assumption is listed in the result
+- Turkish and English interface, including error messages
+- Windows installer and portable build; binaries signed and timestamped
 
-## İndirme
+## Download
 
-| Dosya | Boyut | Açıklama |
+| File | Size | Description |
 |---|---|---|
-| `VAG-ABSCoder-Setup-1.0.0-beta.1.exe` | ~78 MB | Kurulum sihirbazı (önerilen) |
-| `VAG-ABSCoder-Portable-1.0.0-beta.1.exe` | ~78 MB | Kurulum gerektirmez |
+| `VAG-ABSCoder-Setup-1.0.0-beta.1.exe` | ~78 MB | Installer (recommended) |
+| `VAG-ABSCoder-Portable-1.0.0-beta.1.exe` | ~78 MB | No installation required |
 
-## ⚠️ Uyarı
+## ⚠️ Warning
 
-Canlı araca yazmadan önce **orijinal kodlamayı yedekleyin**.
-Kabul edilen bir kod bile arıza kaydı bırakabilir. Değiştirilmiş kodlama ABS, ESC,
-çekiş kontrolü ve park yardımı gibi güvenlik açısından kritik sistemleri etkiler.
+Always back up the original coding before writing to a vehicle.
 
-## SmartScreen uyarısı
+Even an accepted coding may leave fault codes in the control unit. A modified
+coding affects safety-critical systems such as ABS, ESC, traction control and
+parking assist.
 
-EXE'ler imzalı ve zaman damgalıdır. Ancak imza **kendi kendine üretilmiş (self-signed)
-sertifika** ile yapılmıştır; Windows kök deposunda güvenilir olmadığı için SmartScreen
-uyarısı devam eder. *"Diğer bilgiler → Yine de çalıştır"* ile devam edebilirsiniz.
+## About the signature
 
-## Bilinen sınır
+The binaries are signed and timestamped. The certificate is **self-signed**, so it
+is not trusted by Windows and SmartScreen will still warn. Choose
+*More info → Run anyway*.
 
-- 144 kayıt kaynağında yarım kodlama olduğu için kullanılamıyor (bunlar dışarıda bırakıldı)
-- Ayna kuralı doğrulanamayan 2 aile (COMPACT_15, TINY_8K0) yalnızca çözümleme yapar
-- Üretim, ayna kuralı doğrulanmış ailelerde açıktır
+A CA-issued certificate (SignPath, DigiCert, Sectigo, GlobalSign, Azure Trusted
+Signing) removes the warning. See `signpath.md` in the repository.
 
-## Kaynak kodu
+## Known limitations
 
-Tamamı açık — MIT lisansı. `npm install && npm test` ile doğrulayabilirsiniz.
+- 144 source records contain partial coding and are excluded from the dataset
+- `COMPACT_15` and `TINY_8K0` have no verifiable mirror rule and are decode-only
+- Generation is enabled only for families whose mirror rule was verified
+- Mirror verification is 99.92 % for MQB_MK100: one Karoq record in the source data
+  deviates (`byte2=6A → byte16=58`, expected `56`). The rule was not altered.
 
-**Yapımcı: Samet Muriç**
+## Source code
+
+MIT licensed. Verify locally:
+
+```bash
+npm install
+npm test
+npm run data:validate
+```
+
+## Documentation
+
+See the [wiki](https://github.com/lepotane/VAG-ABS-Coding-Calculator/wiki).
+
+Author: **Samet Muriç**

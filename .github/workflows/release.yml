@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Validate dataset
+        run: npm run data:validate
+
+      - name: Build
+        run: npm run build
+
+      - name: Package
+        run: npm run dist
+        env:
+          # SignPath (open source). Remove these two lines until the
+          # account is approved.
+          # SIGNPATH_PROJECT_SLUG: ${{ vars.SIGNPATH_PROJECT_SLUG }}
+          # SIGNPATH_CLI_TOKEN: ${{ secrets.SIGNPATH_CLI_TOKEN }}
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sign (self-signed fallback)
+        if: matrix.os == 'windows-latest' && vars.SIGNPATH_PROJECT_SLUG == ''
+        shell: pwsh
+        run: |
+          if (Test-Path scripts/make-cert.ps1) {
+            .\scripts\make-cert.ps1 -Sign -Password $env:CSC_KEY_PASSWORD
+          }
+
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release/*.exe
+            release/*.dmg
+            release/*.AppImage
+            release/*.deb
+          fail_on_unmatched_files: false

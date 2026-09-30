@@ -26,7 +26,7 @@ Runs on Windows, macOS and Linux. Fully offline — no internet connection requi
 
 ## Status
 
-`v1-beta.1` — pre-release. Expect rough edges.
+`v1-beta.2` — pre-release. Expect rough edges.
 
 ## Tabs
 
@@ -61,8 +61,8 @@ Download from [Releases](https://github.com/lepotane/VAG-ABS-Coding-Calculator/r
 
 | File | Description |
 |---|---|
-| `VAG-ABSCoder-Setup-1.0.0-beta.1.exe` | Installer (recommended) |
-| `VAG-ABSCoder-Portable-1.0.0-beta.1.exe` | No installation required |
+| `VAG-ABSCoder-Setup-1.0.0-beta.2.exe` | Installer (recommended) |
+| `VAG-ABSCoder-Portable-1.0.0-beta.2.exe` | No installation required |
 
 The binaries are digitally signed and timestamped. Windows SmartScreen may still
 show a warning for pre-release builds — choose *More info → Run anyway*.

@@ -117,7 +117,7 @@ it("sema uyumlu", () => {
 
 /* ------------------------------------------------------- AIYNA KURALI */
 /* En kritik test: 102 gercek kodlamanin hepsi ayna kuralina uymali. */
-describe("ayna kurali - 326 gercek arac", () => {
+describe("ayna kurali - 363 gercek arac", () => {
   it("MQB_MK100: 728 kontrolunun >=727si dogru", () => {
     const mm = ds.mirrorMap("MQB_MK100");
     expect(mm).toEqual({ 0: 15, 2: 16, 4: 17, 6: 18, 8: 19, 10: 20, 12: 21, 14: 22 });
@@ -255,7 +255,7 @@ it("ayna dogrulamasi >= %99 (bilinen tek istisna haric)", () => {
   });
 
   it("ayna orani gozlemlerde >= %99 (bilinen tek istisna haric)", () => {
-    // Not: kapsamli ayna dogrulamasi "326 gozlemde ayna dogrulamasi"
+    // Not: kapsamli ayna dogrulamasi "363 gozlemde ayna dogrulamasi"
     // testinde yapilmaktadir. Burada MQB_MK100 icin hizli kontrol.
     let ok = 0, tot = 0;
     for (const o of ds.observationsFor("MQB_MK100")) {

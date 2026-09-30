@@ -9,8 +9,8 @@
 
 | Dosya | Açıklama |
 |---|---|
-| `VAG-ABSCoder-Setup-1.0.0-beta.1.exe` | Kurulum sihirbazı, kısayol oluşturur. Önerilen. |
-| `VAG-ABSCoder-Portable-1.0.0-beta.1.exe` | Tek dosya, kurulum gerektirmez. |
+| `VAG-ABSCoder-Setup-1.0.0-beta.2.exe` | Kurulum sihirbazı, kısayol oluşturur. Önerilen. |
+| `VAG-ABSCoder-Portable-1.0.0-beta.2.exe` | Tek dosya, kurulum gerektirmez. |
 
 Kurulum sihirbazı dizin seçmenize izin verir ve yönetici yetkisi gerektirmez.
 
@@ -25,7 +25,7 @@ gösterebilir.
 ### İndirmeyi doğrulama
 
 ```powershell
-Get-AuthenticodeSignature .\VAG-ABSCoder-Setup-1.0.0-beta.1.exe
+Get-AuthenticodeSignature .\VAG-ABSCoder-Setup-1.0.0-beta.2.exe
 ```
 
 `Status: Valid` ve imzalayan `Samet Muric` olmalı. Başka bir şey dosyanın

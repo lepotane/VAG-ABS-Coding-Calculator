@@ -211,7 +211,7 @@ describe("kodlama Byte1/Byte3 -> VIN 7-8", () => {
   });
 
   it("GERCEK VERI: model kodu cozulebilirligi olcumleniyor", () => {
-    // 326 kayit x 77 farkli model kodu. VIN_MODEL_CODES tablosu VAG genel
+    // 363 kayit x 77 farkli model kodu. VIN_MODEL_CODES tablosu VAG genel
     // kodlari icindir; karsilasmayan kodlar veri setinde zaten etiketli.
     const ds = globalThis.__ds;
     let known = 0, total = 0;

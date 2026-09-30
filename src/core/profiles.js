@@ -1,7 +1,7 @@
 /**
  * 13 AILE (family_registry.py) - her aile kendi motoruyla.
  *
- * Ayna kurallari 326 GERCEK arac koduyla dogrulanmistir
+ * Ayna kurallari 363 GERCEK arac koduyla dogrulanmistir
  * (tools/build_dataset_v2.py -> mirror_verified).
  */
 

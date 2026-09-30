@@ -94,13 +94,81 @@ Observations are real vehicle codes. Useful extra fields:
 
 Mask or omit the VIN. Never add a full vehicle identification number.
 
+## How the dataset is grown
+
+The current 363 records were produced from a candidate pool of 930 observations. A
+record only enters the dataset if it passes **every** check below; anything that fails
+is dropped rather than guessed at.
+
+| Check | Rejected |
+|---|---|
+| Coding is complete (no truncated blocks) | 90 |
+| Confidence ≥ 85 | 63 |
+| Confirmed in at least two independent source pools | 536 |
+| Not all-zero | 42 |
+
+That leaves 199 qualifying records. Each is then matched to a known family by **part
+series and byte length together** — matching on part series alone is not enough, because
+several series share a prefix. 196 matched; 3 did not and were dropped. Of those 196,
+159 were duplicates of records already in the dataset and **37 were new unique codings**,
+taking the dataset from 326 to 363.
+
+A full ledger lives in `statistics.filter_accounting` in the dataset file, so the
+numbers above can always be checked against the data:
+
+```json
+"filter_accounting": {
+  "pool_records": 930,
+  "rejected_all_zero": 42,
+  "rejected_low_confidence": 63,
+  "rejected_single_pool": 536,
+  "rejected_truncated": 90,
+  "passed_filter": 199,
+  "assigned_to_registry_family": 196,
+  "unmatched_family": 3,
+  "duplicate_of_existing": 159,
+  "added": 37
+}
+```
+
+Two lessons worth keeping:
+
+- **Do not invent a family to hold new records.** During this expansion three candidate
+  families (`MK100_IPB`, `MK60EC1`, `ESP9_MQB`) looked new but were already-known
+  families under different names — identical part series, identical byte lengths and an
+  identical mirror map. Folding them into the existing families kept the *verified*
+  mirror rules and re-validated them against the extra data, which is far safer than
+  deriving a mirror map from a handful of observations.
+- **Watch for truncated captures.** 142 candidates looked like short 4-byte codings but
+  were partial blocks (`0000…`), belonging to modules whose real coding is much longer.
+  A minimum byte count is a cheap, effective guard.
+
+## Sources
+
+Sources are declared once in `source_registry` and mirrored into the `sources` array:
+
+```json
+"source_registry": [
+  {
+    "id": "vagcode_info",
+    "label": "vagcode.info - Address 03 (ABS)",
+    "url": "https://vagcode.info/en/components/address-03",
+    "kind": "web"
+  }
+]
+```
+
+Every observation's `source` field holds the label shown in the Decode tab, and
+`source_id` points back at the originating record. When adding data from a new place,
+add it to `source_registry` too rather than writing the name inline.
+
 ## Status values
 
 | Status | Meaning |
 |---|---|
-| `tested` | Confirmed by the original source documentation |
+| `reference` | Meaning taken from a reference byte-meaning table |
 | `observed` | Seen in real vehicles, meaning inferred |
 | `no_description` | Seen but undocumented |
 
 Use the weakest status that is true. Do not upgrade an inferred meaning to
-`tested` without a source.
+`reference` without a source.

@@ -1,6 +1,6 @@
 {
   "name": "vag-abs-coder",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "private": true,
   "description": "VAG ABS / ESP long coding decoder and generator",
   "author": "Samet Muric",

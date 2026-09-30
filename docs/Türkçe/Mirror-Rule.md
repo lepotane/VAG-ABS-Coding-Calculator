@@ -48,12 +48,12 @@ gerçek araçlarla doğrulanır.
 Her ailenin haritası o ailenin gerçek araç kayıtlarıyla sınanır:
 
 ```
-MQB_MK100       1247/1248   %99.92
-COMPACT_1K0      428/428   %100.00
-ESP9_31          100/100   %100.00
-PQ46_2Q0         126/126   %100.00
-...
-toplam          2308/2309   %99.96
+COMPACT_1K0        512/512     100.00 %
+ESP9_31            100/100     100.00 %
+EV_1EA              80/80      100.00 %
+MQB_44               5/5       100.00 %
+...             
+toplam             2308/2309     99.96 %
 ```
 
 Doğrulayıcı %90'ın altındaki her haritayı reddeder.

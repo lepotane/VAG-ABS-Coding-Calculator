@@ -9,8 +9,8 @@ Download from the [releases page](https://github.com/lepotane/VAG-ABS-Coding-Cal
 
 | File | Description |
 |---|---|
-| `VAG-ABSCoder-Setup-1.0.0-beta.1.exe` | Installer, creates shortcuts. Recommended. |
-| `VAG-ABSCoder-Portable-1.0.0-beta.1.exe` | Single file, runs without installing. |
+| `VAG-ABSCoder-Setup-1.0.0-beta.2.exe` | Installer, creates shortcuts. Recommended. |
+| `VAG-ABSCoder-Portable-1.0.0-beta.2.exe` | Single file, runs without installing. |
 
 The installer lets you choose the installation directory and does not require
 administrator rights.
@@ -26,7 +26,7 @@ Choose **More info → Run anyway**, or wait for a CA-signed build.
 ### Verifying the download
 
 ```powershell
-Get-AuthenticodeSignature .\VAG-ABSCoder-Setup-1.0.0-beta.1.exe
+Get-AuthenticodeSignature .\VAG-ABSCoder-Setup-1.0.0-beta.2.exe
 ```
 
 Look for `Status: Valid` and a signer subject of `Samet Muric`. Anything else means

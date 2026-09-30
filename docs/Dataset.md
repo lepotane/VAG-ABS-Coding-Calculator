@@ -20,7 +20,7 @@ This checks:
 4. mirror-flagged bytes exist in the map
 5. every VIN byte has a `vin_digit`
 6. observations reference a known family and carry valid hex bytes
-7. all 326 observations decode to the expected row count
+7. all 363 observations decode to the expected row count
 8. each family's mirror rule passes on its own records
 9. VIN byte positions are known
 

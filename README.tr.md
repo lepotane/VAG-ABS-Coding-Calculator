@@ -14,7 +14,7 @@ bağlantısı gerekmez.
 
 ## Öne çıkanlar
 
-- **13 modül ailesi**, 326 gerçek araç koduyla doğrulandı.
+- **13 modül ailesi**, 363 gerçek araç koduyla doğrulandı.
 - Ayna kuralları her ailede gerçek araçlarla sınandı — toplam **%99,95** tutarlılık.
 - Bayt uzunlukları, ayna haritaları, VIN ofsetleri ve bayt rolleri **gözlem
   verisinden türetilir**; elle yazılmış tahminler yoktur.
@@ -135,9 +135,27 @@ kural tek bir hatalı kaynak kaydına uydurmak için değiştirilmez.
 
 ## Veri kaynakları
 
-- **326 doğrulanmış araç kaydı** — adres 03, [vagcode.info](https://vagcode.info/en/components/address-03)
-- **Bayt anlamları** — *Somnus* kullanıcısının [Ross-Tech forum konu 17417](https://forums.ross-tech.com/index.php?threads/17417/)
-  paylaşımındaki MK100 ABS Coding tablosu
+363 araç kaydının tamamı aşağıdaki kaynaklardan alınmış gerçek okuma kayıtlarıdır. Her bayt
+anlamının yanında kaynağı etiketlenir ve program bu etiketi Çözümle sekmesinde gösterir.
+
+| Kaynak | Katkısı |
+|---|---|
+| [vagcode.info — Adres 03](https://vagcode.info/en/components/address-03) | 326 doğrulanmış araç kaydı |
+| [Ross-Tech konu 17417](https://forums.ross-tech.com/index.php?threads/17417/) (*Somnus*) | MK100 bayt anlamları |
+| [Ross-Tech forum](https://forums.ross-tech.com) | 5 kodlama kaydı |
+| [TDI Club forum](https://forums.tdiclub.com) | 5 kodlama kaydı |
+| [MQB Retrofits](https://mqb-retrofits.com/abs-coding) | kodlama referansı |
+
+Kayıtlar ancak şu kontrollerin tamamından geçtiyse alındı:
+
+- kodlama eksiksiz (kırpılmış blok yok)
+- güven ≥ 85
+- en az iki bağımsız kaynak havuzunda doğrulanmış
+- parça serisi **ve** bayt uzunluğu ile bilinen modül ailesine eşleşmiş
+
+930 gözlemlik aday havuzu 199 uygun kayda indirildi; 196'sı bilinen bir aileye eşleşti, 3'ü
+eşleşmediği için elendi ve 37'si mevcut 326 kaydın üzerine yeni benzersiz kodlama olarak
+eklendi. Tam hesap veri seti dosyasındaki `statistics.filter_accounting` alanındadır.
 
 ## Belgeler
 

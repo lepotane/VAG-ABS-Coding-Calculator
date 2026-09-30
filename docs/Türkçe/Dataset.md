@@ -20,7 +20,7 @@ npm run data:validate
 4. ayna işaretli baytlar haritada mevcut
 5. her VIN baytında `vin_digit` var
 6. gözlemler bilinen bir aileye referans veriyor ve geçerli hex bayt içeriyor
-7. 326 gözlemin tamamı beklenen satır sayısına çözülüyor
+7. 363 gözlemin tamamı beklenen satır sayısına çözülüyor
 8. her ailenin ayna kuralı kendi kayıtlarında geçerli
 9. VIN bayt konumları bilinen değerler
 

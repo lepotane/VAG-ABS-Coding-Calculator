@@ -54,7 +54,7 @@ COMPACT_1K0      428/428   100.00 %
 ESP9_31          100/100   100.00 %
 PQ46_2Q0         126/126   100.00 %
 ...
-total           2096/2097   99.95 %
+total           2308/2309   99.96 %
 ```
 
 The validator rejects any map below 90 %.

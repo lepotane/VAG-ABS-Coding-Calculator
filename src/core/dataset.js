@@ -235,7 +235,7 @@ export class Dataset {
     return out;
   }
 
-  /** referansta olmayip gercek araclarda gorulen deger. */
+  /** Referansta olmayip gercek araclarda gorulen deger. */
   addedValue(familyId, byteIndex, value) {
     const fam = this._added.get(`${byteIndex}:${String(value).toUpperCase()}`);
     return fam || null;

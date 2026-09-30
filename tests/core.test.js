@@ -49,11 +49,11 @@ describe("bit yardimcilar", () => {
 
 /* -------------------------------------------------------------- dataset */
 describe("dataset", () => {
-  it("sema uyumlu", () => {
+it("sema uyumlu", () => {
     const c = ds.checkCompatibility();
     expect(c.problems).toEqual([]);
     expect(c.ok).toBe(true);
-    expect(ds.meta.schema_version).toBe("2.0.0");
+    expect(ds.meta.schema_version).toMatch(/^\d+\.\d+\.\d+$/);
   });
   it("13 aile tanimli (v2)", () => {
     expect(ds.familyIds().length).toBe(13);
@@ -63,8 +63,17 @@ describe("dataset", () => {
     expect(ds.familyIds()).toContain("PQ46_2Q0");
     expect(ds.familyIds()).toContain("EV_1EA");
   });
-  it("326 gercek gozlem yuklendi", () => {
-    expect(ds.observations.length).toBe(326);
+  it("gercek gozlemler yuklendi", () => {
+    // sayi veri seti buyutuldukce degisir; asil degismez,
+    // istatistik ile gozlem listesinin tutarli olmasidir.
+    const s = ds.summary();
+    expect(ds.observations.length).toBeGreaterThan(300);
+    expect(s.observations).toBe(ds.observations.length);
+    expect(s.observations).toBe(ds.raw.statistics.observations_total);
+    expect(s.observations).toBe(
+      ds.raw.statistics.observations_baseline + ds.raw.statistics.observations_added
+    );
+    expect(s.uniqueCodings).toBe(ds.raw.statistics.unique_codings);
   });
   it("ozet uretiliyor", () => {
     const s = ds.summary();
@@ -203,7 +212,7 @@ describe("decode - bilinen kodlar", () => {
     expect(r.warnings.some((w) => w.code === "wiped")).toBe(true);
   });
 
-  it("326 gozlemin TAMAMI cozulebiliyor", () => {
+it("gozlemlerin TAMAMI cozulebiliyor", () => {
     const failures = [];
     for (const o of ds.observations) {
       const r = decode(ds, o.bytes, { family: o.family });
@@ -212,10 +221,12 @@ describe("decode - bilinen kodlar", () => {
         failures.push(`${o.vehicle} (${r.rows.length}/${o.byte_count} bayt)`);
     }
     expect(failures).toEqual([]);
-    expect(ds.observations.length).toBe(326);
+    // her gozlem kendi ailesine ait olmali
+    const orphan = ds.observations.filter((o) => !ds.families[o.family]);
+    expect(orphan).toEqual([]);
   });
 
-it("326 gozlemde ayna dogrulamasi >= %99 (bilinen tek istisna haric)", () => {
+it("ayna dogrulamasi >= %99 (bilinen tek istisna haric)", () => {
     // Her aile kurali gercek arac kodlariyla sinanir.
     let ok = 0, tot = 0;
     const per = {};

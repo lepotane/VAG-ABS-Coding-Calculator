@@ -1,18 +1,26 @@
 {
- "schema_version": "2.0.0",
+ "schema_version": "3.0.0",
  "meta": {
-  "schema_version": "2.0.0",
-  "dataset_version": "2.0.0",
-  "generated": "tools/build_dataset_v2.py",
+  "schema_version": "3.0.0",
+  "dataset_version": "3.0.0",
+  "generated": "tools/build_dataset_v3.py",
   "sources": [
-    "https://vagcode.info/en/components/address-03",
-    "Ross-Tech forum thread 17417 — Somnus: MK100 ABS Coding spreadsheet"
+   "vagcode.info - Address 03 (ABS) - https://vagcode.info/en/components/address-03",
+   "Ross-Tech forum konu 17417 (Somnus) - MK100 byte anlamlari - https://forums.ross-tech.com/index.php?threads/17417/",
+   "Ross-Tech forum - Address 03 kodlama tartismalari - https://forums.ross-tech.com",
+   "TDI Club forum - ABS/ESP kodlama - https://forums.tdiclub.com",
+   "MQB Retrofits - ABS coding referansi - https://mqb-retrofits.com/abs-coding",
+   "Referans byte anlam tablolari (Ross-Tech paylasimi) - https://docs.google.com/spreadsheets/d/1V-OKyWGNWASIKmDf_YrTnT22BEh8ocQ1V1qpXOTBX84"
   ]
  },
- "generated": "tools/build_dataset_v2.py",
+ "generated": "tools/build_dataset_v3.py",
  "sources": [
-  "https://vagcode.info/en/components/address-03 (470 kodlamalı kayıt, 326 tam)",
-  "Ross-Tech forum thread 17417 (Somnus) — byte anlamları"
+  "vagcode.info - Address 03 (ABS) - https://vagcode.info/en/components/address-03",
+  "Ross-Tech forum konu 17417 (Somnus) - MK100 byte anlamlari - https://forums.ross-tech.com/index.php?threads/17417/",
+  "Ross-Tech forum - Address 03 kodlama tartismalari - https://forums.ross-tech.com",
+  "TDI Club forum - ABS/ESP kodlama - https://forums.tdiclub.com",
+  "MQB Retrofits - ABS coding referansi - https://mqb-retrofits.com/abs-coding",
+  "Referans byte anlam tablolari (Ross-Tech paylasimi) - https://docs.google.com/spreadsheets/d/1V-OKyWGNWASIKmDf_YrTnT22BEh8ocQ1V1qpXOTBX84"
  ],
  "families": {
   "MQB_MK100": {
@@ -43,18 +51,18 @@
     "14": 22
    },
    "mirror_verified": {
-    "checked": 1248,
-    "ok": 1247,
-    "pct": 99.92,
+    "checked": 1376,
+    "ok": 1375,
+    "pct": 99.93,
     "pairs": {
-     "0->15": "156/156",
-     "2->16": "155/156",
-     "4->17": "156/156",
-     "6->18": "156/156",
-     "8->19": "156/156",
-     "10->20": "156/156",
-     "12->21": "156/156",
-     "14->22": "156/156"
+     "0->15": "172/172",
+     "2->16": "171/172",
+     "4->17": "172/172",
+     "6->18": "172/172",
+     "8->19": "172/172",
+     "10->20": "172/172",
+     "12->21": "172/172",
+     "14->22": "172/172"
     },
     "exceptions": [
      {
@@ -69,7 +77,7 @@
      }
     ]
    },
-   "observation_count": 156,
+   "observation_count": 172,
    "vehicles": "Golf 7/8, Passat B8, Tiguan, T-Roc, Arteon, Atlas, Octavia III/IV, Superb III, Karoq, Kodiaq, A3 8V/8Y, A4 B9, A6 8X, A7 4K, A8 4K, Q2, Q3 8U, Q5 FY, TT 8S, LEON 5F",
    "note_key": "mk100_main",
    "byte_template": [
@@ -2973,18 +2981,18 @@
     "6": 14
    },
    "mirror_verified": {
-    "checked": 428,
-    "ok": 428,
+    "checked": 512,
+    "ok": 512,
     "pct": 100.0,
     "pairs": {
-     "0->8": "107/107",
-     "2->10": "107/107",
-     "4->12": "107/107",
-     "6->14": "107/107"
+     "0->8": "128/128",
+     "2->10": "128/128",
+     "4->12": "128/128",
+     "6->14": "128/128"
     },
     "exceptions": []
    },
-   "observation_count": 107,
+   "observation_count": 128,
    "vehicles": "Golf 5/6, Golf Plus, Golf Variant, Golf Cabrio, Jetta, Touran, Octavia II, Superb II, Passat B7, Passat NMS, A3 8P, ALTEA, Yeti, Roomster, Ibiza, Polo, Fox, Touareg, Citigo, Rapid, Passat US",
    "note_key": "mk60ec1_differs",
    "byte_template": [
@@ -21456,6 +21464,1510 @@
    "coding": "23DD2485492333C6091410700058C42492CC90080005CB098F00",
    "source": "vagcode.info/address-03",
    "source_id": "763a8a4bab0075574410cb3c81faf96f"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": "1K",
+   "year": "9",
+   "part_number": "1K0 907 379 AD",
+   "hardware": "H35",
+   "software": "0106",
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "3B",
+    "60",
+    "0D",
+    "49",
+    "23",
+    "00",
+    "FC",
+    "88",
+    "0F",
+    "06",
+    "E6",
+    "92",
+    "19",
+    "00",
+    "42",
+    "30",
+    "00"
+   ],
+   "byte_count": 18,
+   "coding": "113B600D492300FC880F06E6921900423000",
+   "source": "tdiclub.com",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AN",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "3B",
+    "20",
+    "1C",
+    "09",
+    "23",
+    "00",
+    "03",
+    "88",
+    "12",
+    "04",
+    "E5",
+    "90",
+    "19",
+    "00",
+    "41",
+    "28",
+    "00"
+   ],
+   "byte_count": 18,
+   "coding": "113B201C09230003881204E5901900412800",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AH",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "3B",
+    "20",
+    "1C",
+    "09",
+    "23",
+    "00",
+    "FC",
+    "88",
+    "0C",
+    "04",
+    "EB",
+    "90",
+    "22",
+    "00",
+    "41",
+    "30",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "113B201C092300FC880C04EB90220041300000",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AH",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "3B",
+    "20",
+    "1C",
+    "09",
+    "24",
+    "00",
+    "01",
+    "88",
+    "0C",
+    "04",
+    "EB",
+    "90",
+    "21",
+    "00",
+    "41",
+    "30",
+    "08",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "113B201C09240001880C04EB90210041300800",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AH",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "3B",
+    "20",
+    "1C",
+    "09",
+    "25",
+    "00",
+    "FF",
+    "88",
+    "13",
+    "04",
+    "E9",
+    "90",
+    "20",
+    "00",
+    "41",
+    "34",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "113B201C092500FF881304E990200041340000",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AH",
+   "hardware": "H30",
+   "software": "0107",
+   "part_series": "1K0 907",
+   "bytes": [
+    "14",
+    "3B",
+    "60",
+    "1C",
+    "09",
+    "22",
+    "00",
+    "FB",
+    "28",
+    "0B",
+    "06",
+    "E7",
+    "90",
+    "1C",
+    "00",
+    "62",
+    "34",
+    "0C",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "143B601C092200FB280B06E7901C0062340C00",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AH",
+   "hardware": "H30",
+   "software": "0107",
+   "part_series": "1K0 907",
+   "bytes": [
+    "14",
+    "3B",
+    "60",
+    "1C",
+    "09",
+    "22",
+    "00",
+    "FB",
+    "28",
+    "0B",
+    "06",
+    "E7",
+    "90",
+    "1C",
+    "00",
+    "62",
+    "3E",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "143B601C092200FB280B06E7901C00623E0000",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AH",
+   "hardware": "H30",
+   "software": "0107",
+   "part_series": "1K0 907",
+   "bytes": [
+    "76",
+    "3B",
+    "60",
+    "F5",
+    "49",
+    "25",
+    "00",
+    "00",
+    "6E",
+    "0E",
+    "06",
+    "E8",
+    "92",
+    "19",
+    "00",
+    "82",
+    "34",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "763B60F5492500006E0E06E892190082340000",
+   "source": "tdiclub.com",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AH",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "84",
+    "3D",
+    "60",
+    "16",
+    "09",
+    "25",
+    "00",
+    "FC",
+    "21",
+    "0B",
+    "06",
+    "E8",
+    "90",
+    "1F",
+    "00",
+    "41",
+    "34",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "843D6016092500FC210B06E8901F0041340000",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": "AJ",
+   "year": "A",
+   "part_number": "1K0 907 379 AJ",
+   "hardware": "H30",
+   "software": "0107",
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "4B",
+    "40",
+    "0C",
+    "49",
+    "23",
+    "00",
+    "00",
+    "88",
+    "12",
+    "02",
+    "E9",
+    "92",
+    "1C",
+    "00",
+    "42",
+    "31",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "114B400C49230000881202E9921C0042310000",
+   "source": "tdiclub.com",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AJ",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "84",
+    "3D",
+    "60",
+    "16",
+    "09",
+    "24",
+    "00",
+    "03",
+    "21",
+    "0F",
+    "06",
+    "EC",
+    "90",
+    "21",
+    "00",
+    "42",
+    "34",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "843D601609240003210F06EC90210042340000",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 AT",
+   "hardware": "H30",
+   "software": "0105",
+   "part_series": "1K0 907",
+   "bytes": [
+    "46",
+    "3C",
+    "40",
+    "0D",
+    "09",
+    "26",
+    "03",
+    "FB",
+    "62",
+    "11",
+    "02",
+    "E8",
+    "90",
+    "1F",
+    "C0",
+    "82",
+    "31",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "463C400D092603FB621102E8901FC082310000",
+   "source": "ross-tech.com",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": "AJ",
+   "year": "B",
+   "part_number": "1K0 907 379 BC",
+   "hardware": "H30",
+   "software": "0106",
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "4B",
+    "60",
+    "0C",
+    "49",
+    "25",
+    "00",
+    "FD",
+    "88",
+    "13",
+    "06",
+    "E6",
+    "92",
+    "21",
+    "00",
+    "42",
+    "B7",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "114B600C492500FD881306E692210042B70000",
+   "source": "tdiclub.com",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 BD",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "42",
+    "20",
+    "12",
+    "49",
+    "26",
+    "00",
+    "00",
+    "88",
+    "13",
+    "04",
+    "EA",
+    "92",
+    "1D",
+    "00",
+    "41",
+    "38",
+    "08",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "1142201249260000881304EA921D0041380800",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 BE",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "91",
+    "3F",
+    "40",
+    "0E",
+    "09",
+    "26",
+    "01",
+    "FE",
+    "89",
+    "0F",
+    "02",
+    "E4",
+    "90",
+    "20",
+    "80",
+    "49",
+    "31",
+    "04",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "913F400E092601FE890F02E490208049310400",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": "AJ",
+   "year": "C",
+   "part_number": "1K0 907 379 BJ",
+   "hardware": "H31",
+   "software": "0121",
+   "part_series": "1K0 907",
+   "bytes": [
+    "14",
+    "4B",
+    "80",
+    "0C",
+    "49",
+    "25",
+    "80",
+    "01",
+    "28",
+    "10",
+    "01",
+    "EC",
+    "92",
+    "22",
+    "01",
+    "41",
+    "B7",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "144B800C49258001281001EC92220141B70000",
+   "source": "ross-tech.com",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 BJ",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "B1",
+    "4B",
+    "40",
+    "0C",
+    "49",
+    "24",
+    "08",
+    "FB",
+    "8D",
+    "11",
+    "02",
+    "E4",
+    "92",
+    "1D",
+    "10",
+    "61",
+    "A7",
+    "00",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "B14B400C492408FB8D1102E4921D1061A70000",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 BL",
+   "hardware": "H31",
+   "software": "0152",
+   "part_series": "1K0 907",
+   "bytes": [
+    "11",
+    "4B",
+    "60",
+    "0C",
+    "49",
+    "2B",
+    "80",
+    "FE",
+    "88",
+    "12",
+    "06",
+    "E6",
+    "92",
+    "1F",
+    "01",
+    "42",
+    "87",
+    "32",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "114B600C492B80FE881206E6921F0142873200",
+   "source": "tdiclub.com",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 BL",
+   "hardware": "H31",
+   "software": "0152",
+   "part_series": "1K0 907",
+   "bytes": [
+    "16",
+    "3B",
+    "40",
+    "0D",
+    "09",
+    "28",
+    "00",
+    "02",
+    "68",
+    "0C",
+    "02",
+    "E8",
+    "90",
+    "21",
+    "00",
+    "82",
+    "35",
+    "08",
+    "00"
+   ],
+   "byte_count": 19,
+   "coding": "163B400D09280002680C02E890210082350800",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "COMPACT_1K0 (1K0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 BM",
+   "hardware": null,
+   "software": null,
+   "part_series": "1K0 907",
+   "bytes": [
+    "84",
+    "3D",
+    "80",
+    "16",
+    "19",
+    "28",
+    "00",
+    "00",
+    "21",
+    "0B",
+    "01",
+    "E9",
+    "98",
+    "1B",
+    "00",
+    "42",
+    "A5",
+    "00",
+    "50",
+    "73"
+   ],
+   "byte_count": 20,
+   "coding": "843D801619280000210B01E9981B0042A5005073",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "COMPACT_1K0",
+   "vehicle": "ESP MK60EC1",
+   "model_code": null,
+   "year": null,
+   "part_number": "1K0 907 379 CC",
+   "hardware": "H46",
+   "software": "0175",
+   "part_series": "1K0 907",
+   "bytes": [
+    "A1",
+    "4B",
+    "40",
+    "0C",
+    "49",
+    "23",
+    "00",
+    "FD",
+    "85",
+    "0F",
+    "02",
+    "EB",
+    "92",
+    "1E",
+    "00",
+    "41",
+    "20",
+    "10",
+    "00",
+    "10"
+   ],
+   "byte_count": 20,
+   "coding": "A14B400C492300FD850F02EB921E004120100010",
+   "source": "vagcode.info",
+   "source_id": "obs_314b302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 AD",
+   "hardware": "H75",
+   "software": "0537",
+   "part_series": "5Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "62",
+    "A1",
+    "20",
+    "20",
+    "0A",
+    "75",
+    "03",
+    "80",
+    "06",
+    "08",
+    "01",
+    "C3",
+    "29",
+    "80",
+    "46",
+    "04",
+    "50",
+    "C0",
+    "60",
+    "80",
+    "94",
+    "F3",
+    "F8",
+    "3A",
+    "50",
+    "2A",
+    "C1"
+   ],
+   "byte_count": 29,
+   "coding": "01FA62A120200A750380060801C32980460450C0608094F3F83A502AC1",
+   "source": "ross-tech.com",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "3Q0 907 379 AA",
+   "hardware": "H42",
+   "software": "0623",
+   "part_series": "3Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "62",
+    "A1",
+    "34",
+    "28",
+    "09",
+    "75",
+    "07",
+    "80",
+    "02",
+    "06",
+    "41",
+    "C7",
+    "25",
+    "80",
+    "46",
+    "2C",
+    "90",
+    "E0",
+    "40",
+    "82",
+    "A4",
+    "B4",
+    "14",
+    "63",
+    "F0",
+    "D2",
+    "6A",
+    "A9"
+   ],
+   "byte_count": 30,
+   "coding": "01FA62A1342809750780020641C72580462C90E04082A4B41463F0D26AA9",
+   "source": "vagcode.info",
+   "source_id": "obs_3351302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "3Q0 907 379 AA",
+   "hardware": "H42",
+   "software": "0623",
+   "part_series": "3Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "62",
+    "A1",
+    "34",
+    "28",
+    "09",
+    "75",
+    "07",
+    "80",
+    "02",
+    "06",
+    "41",
+    "C7",
+    "25",
+    "80",
+    "46",
+    "2C",
+    "90",
+    "E0",
+    "40",
+    "82",
+    "A4",
+    "B4",
+    "14",
+    "63",
+    "F0",
+    "D2",
+    "C2",
+    "A9"
+   ],
+   "byte_count": 30,
+   "coding": "01FA62A1342809750780020641C72580462C90E04082A4B41463F0D2C2A9",
+   "source": "vagcode.info",
+   "source_id": "obs_3351302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "3Q0 907 379 AA",
+   "hardware": "H42",
+   "software": "0623",
+   "part_series": "3Q0 907",
+   "bytes": [
+    "12",
+    "F1",
+    "8A",
+    "A2",
+    "24",
+    "24",
+    "0A",
+    "70",
+    "03",
+    "7A",
+    "06",
+    "02",
+    "41",
+    "CC",
+    "29",
+    "48",
+    "51",
+    "24",
+    "50",
+    "C0",
+    "60",
+    "82",
+    "94",
+    "B3",
+    "00",
+    "61",
+    "00",
+    "04",
+    "06",
+    "08"
+   ],
+   "byte_count": 30,
+   "coding": "12F18AA224240A70037A060241CC2948512450C0608294B3006100040608",
+   "source": "ross-tech.com",
+   "source_id": "obs_3351302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "3Q0 907 379 P",
+   "hardware": "H32",
+   "software": "0385",
+   "part_series": "3Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "6A",
+    "A1",
+    "24",
+    "28",
+    "09",
+    "75",
+    "00",
+    "80",
+    "02",
+    "06",
+    "81",
+    "C7",
+    "25",
+    "80",
+    "56",
+    "24",
+    "90",
+    "00",
+    "40",
+    "81",
+    "A4",
+    "B2",
+    "14",
+    "63",
+    "F0",
+    "D2",
+    "C0",
+    "A2"
+   ],
+   "byte_count": 30,
+   "coding": "01FA6AA1242809750080020681C72580562490004081A4B21463F0D2C0A2",
+   "source": "vagcode.info",
+   "source_id": "obs_3351302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": "AU",
+   "year": "F",
+   "part_number": "3Q0 907 379 Q",
+   "hardware": "H42",
+   "software": "0610",
+   "part_series": "3Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "6A",
+    "A1",
+    "24",
+    "26",
+    "09",
+    "6D",
+    "07",
+    "77",
+    "02",
+    "05",
+    "81",
+    "CA",
+    "25",
+    "80",
+    "56",
+    "24",
+    "90",
+    "E0",
+    "40",
+    "81",
+    "A4",
+    "B6",
+    "00",
+    "20",
+    "00",
+    "B4",
+    "01",
+    "03"
+   ],
+   "byte_count": 30,
+   "coding": "01FA6AA12426096D0777020581CA2580562490E04081A4B6002000B40103",
+   "source": "vagcode.info",
+   "source_id": "obs_3351302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 AA",
+   "hardware": "H31",
+   "software": "0457",
+   "part_series": "5Q0 907",
+   "bytes": [
+    "12",
+    "F1",
+    "62",
+    "A2",
+    "24",
+    "27",
+    "0A",
+    "6C",
+    "01",
+    "77",
+    "06",
+    "08",
+    "41",
+    "CB",
+    "29",
+    "48",
+    "46",
+    "24",
+    "50",
+    "80",
+    "60",
+    "82",
+    "94",
+    "F2",
+    "02",
+    "61",
+    "00",
+    "78",
+    "86",
+    "08"
+   ],
+   "byte_count": 30,
+   "coding": "12F162A224270A6C0177060841CB294846245080608294F2026100788608",
+   "source": "vagcode.info",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 AB",
+   "hardware": "H31",
+   "software": "0557",
+   "part_series": "5Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "62",
+    "A1",
+    "24",
+    "27",
+    "09",
+    "6E",
+    "03",
+    "77",
+    "06",
+    "07",
+    "41",
+    "C5",
+    "29",
+    "80",
+    "46",
+    "24",
+    "90",
+    "C0",
+    "60",
+    "82",
+    "94",
+    "F3",
+    "F8",
+    "62",
+    "50",
+    "78",
+    "C2",
+    "02"
+   ],
+   "byte_count": 30,
+   "coding": "01FA62A12427096E0377060741C52980462490C0608294F3F8625078C202",
+   "source": "vagcode.info",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 K",
+   "hardware": "H31",
+   "software": "0371",
+   "part_series": "5Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "6A",
+    "A1",
+    "24",
+    "21",
+    "09",
+    "6E",
+    "00",
+    "80",
+    "02",
+    "06",
+    "81",
+    "CB",
+    "25",
+    "80",
+    "56",
+    "24",
+    "90",
+    "00",
+    "40",
+    "81",
+    "A4",
+    "B2",
+    "00",
+    "63",
+    "00",
+    "50",
+    "C0",
+    "02"
+   ],
+   "byte_count": 30,
+   "coding": "01FA6AA12421096E0080020681CB2580562490004081A4B200630050C002",
+   "source": "vagcode.info",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 K",
+   "hardware": "H31",
+   "software": "0371",
+   "part_series": "5Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "6A",
+    "A1",
+    "24",
+    "22",
+    "09",
+    "6F",
+    "00",
+    "7F",
+    "02",
+    "00",
+    "81",
+    "C9",
+    "25",
+    "80",
+    "56",
+    "24",
+    "90",
+    "00",
+    "40",
+    "81",
+    "A4",
+    "B2",
+    "00",
+    "63",
+    "00",
+    "50",
+    "C0",
+    "02"
+   ],
+   "byte_count": 30,
+   "coding": "01FA6AA12422096F007F020081C92580562490004081A4B200630050C002",
+   "source": "vagcode.info",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 K",
+   "hardware": "H31",
+   "software": "0371",
+   "part_series": "5Q0 907",
+   "bytes": [
+    "01",
+    "FA",
+    "6A",
+    "A1",
+    "24",
+    "24",
+    "09",
+    "72",
+    "00",
+    "77",
+    "02",
+    "00",
+    "81",
+    "CA",
+    "25",
+    "80",
+    "56",
+    "24",
+    "90",
+    "00",
+    "40",
+    "81",
+    "A4",
+    "B2",
+    "00",
+    "63",
+    "00",
+    "50",
+    "C0",
+    "02"
+   ],
+   "byte_count": 30,
+   "coding": "01FA6AA1242409720077020081CA2580562490004081A4B200630050C002",
+   "source": "vagcode.info",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 L",
+   "hardware": "H31",
+   "software": "0471",
+   "part_series": "5Q0 907",
+   "bytes": [
+    "04",
+    "FA",
+    "62",
+    "A1",
+    "24",
+    "20",
+    "09",
+    "6E",
+    "03",
+    "7B",
+    "07",
+    "06",
+    "41",
+    "C5",
+    "29",
+    "20",
+    "46",
+    "24",
+    "90",
+    "C0",
+    "E0",
+    "82",
+    "94",
+    "F3",
+    "00",
+    "40",
+    "00",
+    "78",
+    "C0",
+    "09"
+   ],
+   "byte_count": 30,
+   "coding": "04FA62A12420096E037B070641C52920462490C0E08294F300400078C009",
+   "source": "vagcode.info",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "EMB8 EHCB",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 R",
+   "hardware": "H31",
+   "software": "0356",
+   "part_series": "5Q0 907",
+   "bytes": [
+    "1A",
+    "07",
+    "93",
+    "91",
+    "54",
+    "21",
+    "09",
+    "71",
+    "00",
+    "77",
+    "06",
+    "07",
+    "41",
+    "C5",
+    "29",
+    "58",
+    "C9",
+    "2A",
+    "90",
+    "00",
+    "60",
+    "82",
+    "94",
+    "F4",
+    "00",
+    "63",
+    "00",
+    "70",
+    "C0",
+    "09"
+   ],
+   "byte_count": 30,
+   "coding": "1A079391542109710077060741C52958C92A9000608294F400630070C009",
+   "source": "ross-tech.com",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "MQB_MK100 (5Q0 907)",
+   "model_code": null,
+   "year": null,
+   "part_number": "5Q0 907 379 R",
+   "hardware": null,
+   "software": null,
+   "part_series": "5Q0 907",
+   "bytes": [
+    "1C",
+    "07",
+    "62",
+    "91",
+    "14",
+    "29",
+    "09",
+    "6C",
+    "00",
+    "7D",
+    "06",
+    "04",
+    "41",
+    "C7",
+    "24",
+    "38",
+    "46",
+    "28",
+    "90",
+    "00",
+    "60",
+    "82",
+    "24",
+    "F0",
+    "00",
+    "40",
+    "00",
+    "70",
+    "C0",
+    "02"
+   ],
+   "byte_count": 30,
+   "coding": "1C0762911429096C007D060441C7243846289000608224F000400070C002",
+   "source": "forum",
+   "source_id": "obs_3551302039303720"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": "AU",
+   "year": "K",
+   "part_number": "5Q0 614 517 CR",
+   "hardware": "H25",
+   "software": "0523",
+   "part_series": "5Q0 614",
+   "bytes": [
+    "0A",
+    "EE",
+    "6A",
+    "9A",
+    "34",
+    "22",
+    "23",
+    "6F",
+    "47",
+    "7B",
+    "06",
+    "04",
+    "62",
+    "C7",
+    "49",
+    "50",
+    "56",
+    "2C",
+    "C4",
+    "E2",
+    "60",
+    "46",
+    "92",
+    "31",
+    "38",
+    "20",
+    "F0",
+    "08",
+    "42",
+    "82",
+    "42",
+    "0B",
+    "00",
+    "2E",
+    "64",
+    "12",
+    "1A",
+    "03",
+    "10",
+    "2F",
+    "35",
+    "35",
+    "19",
+    "19",
+    "32",
+    "32",
+    "00"
+   ],
+   "byte_count": 47,
+   "coding": "0AEE6A9A3422236F477B060462C74950562CC4E2604692313820F0084282420B002E64121A03102F35351919323200",
+   "source": "forum",
+   "source_id": "obs_3551302036313420"
+  },
+  {
+   "family": "MQB_MK100",
+   "vehicle": "ESC",
+   "model_code": "AU",
+   "year": "K",
+   "part_number": "5Q0 614 517 DD",
+   "hardware": "H25",
+   "software": "0424",
+   "part_series": "5Q0 614",
+   "bytes": [
+    "1F",
+    "07",
+    "8A",
+    "A1",
+    "34",
+    "22",
+    "0C",
+    "71",
+    "47",
+    "7D",
+    "06",
+    "06",
+    "62",
+    "C7",
+    "25",
+    "F8",
+    "51",
+    "2C",
+    "30",
+    "E2",
+    "60",
+    "46",
+    "A4",
+    "73",
+    "34",
+    "63",
+    "F0",
+    "78",
+    "C0",
+    "02",
+    "42",
+    "0B",
+    "00",
+    "0C",
+    "62",
+    "12",
+    "12",
+    "0B",
+    "09",
+    "5A",
+    "35",
+    "35",
+    "19",
+    "19",
+    "32",
+    "32",
+    "00"
+   ],
+   "byte_count": 47,
+   "coding": "1F078AA134220C71477D060662C725F8512C30E26046A4733463F078C002420B000C6212120B095A35351919323200",
+   "source": "forum",
+   "source_id": "obs_3551302036313420"
   }
  ],
  "observed_values": {
@@ -21479,7 +22991,7 @@
      ]
     },
     "01": {
-     "count": 27,
+     "count": 36,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2019",
@@ -21487,14 +22999,17 @@
       "Volkswagen Golf 2013",
       "Volkswagen Golf 2014",
       "Volkswagen Golf 2016",
-      "Volkswagen Golf 2018"
+      "Volkswagen Golf 2018",
+      "ESC",
+      "ESC F"
      ]
     },
     "04": {
-     "count": 6,
+     "count": 7,
      "vehicles": [
       "Volkswagen Golf 2016",
-      "Volkswagen Golf 2014"
+      "Volkswagen Golf 2014",
+      "ESC"
      ]
     },
     "24": {
@@ -21524,12 +23039,13 @@
      ]
     },
     "1C": {
-     "count": 10,
+     "count": 11,
      "vehicles": [
       "Skoda Octavia 2015",
       "Skoda Octavia 2014",
       "Skoda Octavia 2016",
-      "Skoda Octavia 2017"
+      "Skoda Octavia 2017",
+      "MQB_MK100 (5Q0 907)"
      ]
     },
     "25": {
@@ -21570,12 +23086,13 @@
      ]
     },
     "12": {
-     "count": 5,
+     "count": 7,
      "vehicles": [
       "Audi A3 Cabrio 2020",
       "Audi A3 2016",
       "Audi A3 2015",
-      "Audi A3 Cabrio 2017"
+      "Audi A3 Cabrio 2017",
+      "ESC"
      ]
     },
     "31": {
@@ -21598,12 +23115,13 @@
      ]
     },
     "0A": {
-     "count": 11,
+     "count": 12,
      "vehicles": [
       "Volkswagen Tiguan 2017",
       "Volkswagen Tiguan 2021",
       "Volkswagen Tiguan 2018",
-      "Volkswagen Tiguan 2020"
+      "Volkswagen Tiguan 2020",
+      "ESC K"
      ]
     },
     "46": {
@@ -21662,9 +23180,10 @@
      ]
     },
     "1F": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Skoda Karoq 2020"
+      "Skoda Karoq 2020",
+      "ESC K"
      ]
     },
     "70": {
@@ -21686,6 +23205,12 @@
      "vehicles": [
       "SEAT LEON 2016"
      ]
+    },
+    "1A": {
+     "count": 1,
+     "vehicles": [
+      "EMB8 EHCB"
+     ]
     }
    },
    "1": {
@@ -21696,7 +23221,7 @@
      ]
     },
     "FA": {
-     "count": 47,
+     "count": 57,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -21713,7 +23238,7 @@
      ]
     },
     "EE": {
-     "count": 23,
+     "count": 24,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "SEAT LEON 2013",
@@ -21730,7 +23255,7 @@
      ]
     },
     "07": {
-     "count": 38,
+     "count": 41,
      "vehicles": [
       "Skoda Octavia 2019",
       "Skoda Octavia 2018",
@@ -21747,13 +23272,14 @@
      ]
     },
     "F1": {
-     "count": 10,
+     "count": 12,
      "vehicles": [
       "Audi A3 2014",
       "Audi A3 Cabrio 2020",
       "Audi A3 2016",
       "Audi A3 2015",
-      "Audi A3 Cabrio 2017"
+      "Audi A3 Cabrio 2017",
+      "ESC"
      ]
     },
     "00": {
@@ -21805,7 +23331,7 @@
      ]
     },
     "6A": {
-     "count": 79,
+     "count": 85,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2017",
@@ -21822,7 +23348,7 @@
      ]
     },
     "93": {
-     "count": 9,
+     "count": 10,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "Skoda Octavia 2018",
@@ -21830,11 +23356,12 @@
       "Volkswagen Golf 2014",
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2018",
-      "SEAT LEON 2016"
+      "SEAT LEON 2016",
+      "EMB8 EHCB"
      ]
     },
     "62": {
-     "count": 23,
+     "count": 30,
      "vehicles": [
       "Skoda Octavia 2014",
       "Skoda Octavia 2018",
@@ -21846,7 +23373,8 @@
       "Audi A3 2015",
       "Volkswagen Golf 2014",
       "Volkswagen Golf 2016",
-      "Volkswagen Golf 2017"
+      "Volkswagen Golf 2017",
+      "ESC"
      ]
     },
     "92": {
@@ -21865,11 +23393,13 @@
      ]
     },
     "8A": {
-     "count": 4,
+     "count": 6,
      "vehicles": [
       "Audi A3 2016",
       "Volkswagen Golf 2014",
-      "SEAT LEON 2020"
+      "SEAT LEON 2020",
+      "ESC",
+      "ESC K"
      ]
     },
     "7A": {
@@ -21917,7 +23447,7 @@
      ]
     },
     "A1": {
-     "count": 42,
+     "count": 53,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2019",
@@ -21928,21 +23458,24 @@
       "Volkswagen Golf 2018",
       "Skoda Karoq 2020",
       "Volkswagen Jetta 2024",
-      "Volkswagen Jetta 2023"
+      "Volkswagen Jetta 2023",
+      "ESC",
+      "ESC F"
      ]
     },
     "9A": {
-     "count": 13,
+     "count": 14,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "Volkswagen Tiguan 2017",
       "Volkswagen Tiguan 2021",
       "Volkswagen Tiguan 2018",
-      "Volkswagen Golf Sportsvan 2021"
+      "Volkswagen Golf Sportsvan 2021",
+      "ESC K"
      ]
     },
     "91": {
-     "count": 20,
+     "count": 22,
      "vehicles": [
       "Skoda Octavia 2019",
       "Skoda Octavia 2018",
@@ -21950,7 +23483,9 @@
       "Skoda Octavia 2014",
       "Skoda Octavia 2016",
       "Skoda Octavia 2017",
-      "Skoda Octavia 2020"
+      "Skoda Octavia 2020",
+      "EMB8 EHCB",
+      "MQB_MK100 (5Q0 907)"
      ]
     },
     "9C": {
@@ -21985,13 +23520,14 @@
      ]
     },
     "A2": {
-     "count": 10,
+     "count": 12,
      "vehicles": [
       "Audi A3 2014",
       "Audi A3 Cabrio 2020",
       "Audi A3 2016",
       "Audi A3 2015",
-      "Audi A3 Cabrio 2017"
+      "Audi A3 Cabrio 2017",
+      "ESC"
      ]
     },
     "00": {
@@ -22043,7 +23579,7 @@
      ]
     },
     "54": {
-     "count": 23,
+     "count": 24,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -22060,7 +23596,7 @@
      ]
     },
     "24": {
-     "count": 31,
+     "count": 40,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2017",
@@ -22095,7 +23631,7 @@
      ]
     },
     "34": {
-     "count": 58,
+     "count": 62,
      "vehicles": [
       "Skoda Octavia 2018",
       "Skoda Superb III 2018",
@@ -22112,20 +23648,22 @@
      ]
     },
     "20": {
-     "count": 4,
+     "count": 5,
      "vehicles": [
       "SEAT LEON 2013",
       "Volkswagen Golf 2013",
       "Skoda Octavia 2020",
-      "SEAT LEON 2020"
+      "SEAT LEON 2020",
+      "ESC"
      ]
     },
     "14": {
-     "count": 5,
+     "count": 6,
      "vehicles": [
       "SEAT LEON 2014",
       "Volkswagen Golf 2014",
-      "Volkswagen Golf 2015"
+      "Volkswagen Golf 2015",
+      "MQB_MK100 (5Q0 907)"
      ]
     },
     "90": {
@@ -22213,7 +23751,7 @@
      ]
     },
     "21": {
-     "count": 23,
+     "count": 25,
      "vehicles": [
       "Volkswagen Tiguan 2019",
       "Skoda Kodiaq 2020",
@@ -22230,7 +23768,7 @@
      ]
     },
     "26": {
-     "count": 10,
+     "count": 11,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Skoda Superb III 2018",
@@ -22241,11 +23779,12 @@
       "Volkswagen Passat B8 2016",
       "Volkswagen Golf 2014",
       "Volkswagen Tiguan 2022",
-      "Volkswagen Tharu CS 2023"
+      "Volkswagen Tharu CS 2023",
+      "ESC F"
      ]
     },
     "22": {
-     "count": 29,
+     "count": 32,
      "vehicles": [
       "Volkswagen Golf 2019",
       "Skoda Octavia 2019",
@@ -22262,7 +23801,7 @@
      ]
     },
     "20": {
-     "count": 23,
+     "count": 25,
      "vehicles": [
       "Volkswagen Golf 2016",
       "Volkswagen Tiguan 2020",
@@ -22294,7 +23833,7 @@
      ]
     },
     "27": {
-     "count": 12,
+     "count": 14,
      "vehicles": [
       "Skoda Octavia 2018",
       "Skoda Octavia 2014",
@@ -22303,21 +23842,23 @@
       "Volkswagen Passat B8 2016",
       "Volkswagen Golf 2018",
       "Volkswagen Tharu CS 2022",
-      "Volkswagen Tiguan 2023"
+      "Volkswagen Tiguan 2023",
+      "ESC"
      ]
     },
     "29": {
-     "count": 6,
+     "count": 7,
      "vehicles": [
       "Skoda Octavia 2018",
       "Skoda Kodiaq 2018",
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2016",
-      "Audi A3 Cabrio 2017"
+      "Audi A3 Cabrio 2017",
+      "MQB_MK100 (5Q0 907)"
      ]
     },
     "28": {
-     "count": 13,
+     "count": 16,
      "vehicles": [
       "Audi A3 2014",
       "Audi A3 Cabrio 2020",
@@ -22326,11 +23867,12 @@
       "Volkswagen Passat B8 2017",
       "Volkswagen Golf 2014",
       "Volkswagen Golf 2016",
-      "Volkswagen Golf 2017"
+      "Volkswagen Golf 2017",
+      "ESC"
      ]
     },
     "24": {
-     "count": 9,
+     "count": 11,
      "vehicles": [
       "Audi A3 2015",
       "Volkswagen T-Roc 2019",
@@ -22338,7 +23880,8 @@
       "Volkswagen Golf 2016",
       "Volkswagen Jetta 2024",
       "Skoda Kodiaq 2024",
-      "Volkswagen Jetta 2023"
+      "Volkswagen Jetta 2023",
+      "ESC"
      ]
     },
     "00": {
@@ -22368,7 +23911,7 @@
      ]
     },
     "09": {
-     "count": 35,
+     "count": 46,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2016",
@@ -22400,14 +23943,15 @@
      ]
     },
     "23": {
-     "count": 8,
+     "count": 9,
      "vehicles": [
       "Skoda Superb III 2018",
       "Skoda Kodiaq 2020",
       "Skoda Superb III 2019",
       "Volkswagen Passat B8 2018",
       "Volkswagen Tiguan 2020",
-      "Skoda Kodiaq 2024"
+      "Skoda Kodiaq 2024",
+      "ESC K"
      ]
     },
     "29": {
@@ -22459,11 +24003,12 @@
      ]
     },
     "0A": {
-     "count": 7,
+     "count": 10,
      "vehicles": [
       "Audi A3 2014",
       "Audi A3 2015",
-      "Audi A3 2016"
+      "Audi A3 2016",
+      "ESC"
      ]
     },
     "22": {
@@ -22481,9 +24026,10 @@
      ]
     },
     "0C": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Volkswagen T-Roc 2019"
+      "Volkswagen T-Roc 2019",
+      "ESC K"
      ]
     },
     "24": {
@@ -22541,7 +24087,7 @@
    },
    "7": {
     "6D": {
-     "count": 13,
+     "count": 14,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Skoda Octavia 2019",
@@ -22550,11 +24096,12 @@
       "Volkswagen Passat B7 2015",
       "Volkswagen Golf 2014",
       "Volkswagen Golf 2015",
-      "Volkswagen Golf 2018"
+      "Volkswagen Golf 2018",
+      "ESC F"
      ]
     },
     "71": {
-     "count": 17,
+     "count": 19,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Skoda Kodiaq 2018",
@@ -22565,11 +24112,13 @@
       "Volkswagen Golf 2015",
       "Skoda Kodiaq 2020",
       "SEAT ATECA 2022",
-      "Volkswagen Tiguan 2023"
+      "Volkswagen Tiguan 2023",
+      "EMB8 EHCB",
+      "ESC K"
      ]
     },
     "70": {
-     "count": 11,
+     "count": 12,
      "vehicles": [
       "Volkswagen Tiguan 2019",
       "Skoda Octavia 2018",
@@ -22580,7 +24129,8 @@
       "Volkswagen Passat B8 2016",
       "Volkswagen Passat B8 2017",
       "Volkswagen Golf 2017",
-      "Volkswagen Tharu CS 2023"
+      "Volkswagen Tharu CS 2023",
+      "ESC"
      ]
     },
     "74": {
@@ -22601,7 +24151,7 @@
      ]
     },
     "75": {
-     "count": 20,
+     "count": 24,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Skoda Superb III 2017",
@@ -22618,7 +24168,7 @@
      ]
     },
     "6E": {
-     "count": 14,
+     "count": 17,
      "vehicles": [
       "Volkswagen Golf 2017",
       "SEAT LEON 2017",
@@ -22630,7 +24180,8 @@
       "Skoda Kodiaq 2024",
       "Audi A3 Cabrio 2017",
       "Volkswagen Golf 2019",
-      "SEAT LEON 2020"
+      "SEAT LEON 2020",
+      "ESC"
      ]
     },
     "73": {
@@ -22651,7 +24202,7 @@
      ]
     },
     "6C": {
-     "count": 18,
+     "count": 20,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "Skoda Octavia 2014",
@@ -22668,7 +24219,7 @@
      ]
     },
     "72": {
-     "count": 9,
+     "count": 10,
      "vehicles": [
       "Skoda Octavia 2018",
       "Audi A3 2015",
@@ -22677,11 +24228,12 @@
       "Volkswagen Arteon 2018",
       "Volkswagen Golf 2013",
       "Skoda Octavia 2020",
-      "Volkswagen Tiguan 2017"
+      "Volkswagen Tiguan 2017",
+      "ESC"
      ]
     },
     "6F": {
-     "count": 14,
+     "count": 16,
      "vehicles": [
       "Skoda Superb III 2016",
       "Skoda Octavia 2017",
@@ -22692,7 +24244,9 @@
       "Volkswagen Arteon 2019",
       "Volkswagen Golf 2016",
       "Volkswagen Jetta 2024",
-      "Volkswagen T-Roc 2023"
+      "Volkswagen T-Roc 2023",
+      "ESC",
+      "ESC K"
      ]
     },
     "00": {
@@ -22721,7 +24275,7 @@
      ]
     },
     "00": {
-     "count": 18,
+     "count": 24,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2016",
@@ -22732,7 +24286,9 @@
       "SEAT LEON 2014",
       "SEAT LEON 2016",
       "Audi A3 2015",
-      "Volkswagen Golf 2017"
+      "Volkswagen Golf 2017",
+      "ESC",
+      "EMB8 EHCB"
      ]
     },
     "80": {
@@ -22754,7 +24310,7 @@
      ]
     },
     "47": {
-     "count": 51,
+     "count": 53,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "Skoda Superb III 2018",
@@ -22771,7 +24327,7 @@
      ]
     },
     "07": {
-     "count": 33,
+     "count": 36,
      "vehicles": [
       "Skoda Superb III 2016",
       "SEAT LEON 2014",
@@ -22781,7 +24337,9 @@
       "Volkswagen Passat B8 2016",
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2016",
-      "SEAT LEON 2020"
+      "SEAT LEON 2020",
+      "ESC",
+      "ESC F"
      ]
     },
     "87": {
@@ -22793,11 +24351,12 @@
      ]
     },
     "01": {
-     "count": 5,
+     "count": 6,
      "vehicles": [
       "Audi A3 2014",
       "Audi A3 2015",
-      "Audi A3 2016"
+      "Audi A3 2016",
+      "ESC"
      ]
     },
     "8B": {
@@ -22808,13 +24367,14 @@
      ]
     },
     "03": {
-     "count": 14,
+     "count": 18,
      "vehicles": [
       "Audi A3 2015",
       "Audi A3 2016",
       "Volkswagen Golf 2013",
       "Volkswagen Golf 2014",
-      "Volkswagen Golf 2015"
+      "Volkswagen Golf 2015",
+      "ESC"
      ]
     },
     "45": {
@@ -22839,7 +24399,7 @@
    },
    "9": {
     "80": {
-     "count": 23,
+     "count": 28,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Golf 2015",
@@ -22856,7 +24416,7 @@
      ]
     },
     "77": {
-     "count": 19,
+     "count": 24,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -22923,7 +24483,7 @@
      ]
     },
     "7B": {
-     "count": 14,
+     "count": 16,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "Skoda Octavia 2018",
@@ -22933,7 +24493,9 @@
       "Volkswagen Passat B8 2018",
       "Volkswagen Arteon 2018",
       "Volkswagen Golf 2015",
-      "Volkswagen Golf 2018"
+      "Volkswagen Golf 2018",
+      "ESC",
+      "ESC K"
      ]
     },
     "7E": {
@@ -22954,7 +24516,7 @@
      ]
     },
     "7F": {
-     "count": 16,
+     "count": 17,
      "vehicles": [
       "Skoda Kodiaq 2020",
       "Skoda Superb III 2017",
@@ -22971,7 +24533,7 @@
      ]
     },
     "7D": {
-     "count": 11,
+     "count": 13,
      "vehicles": [
       "Skoda Superb III 2016",
       "Audi A3 2016",
@@ -22980,11 +24542,13 @@
       "Volkswagen Golf 2017",
       "Volkswagen Tiguan 2021",
       "Volkswagen T-Roc 2023",
-      "SEAT LEON 2016"
+      "SEAT LEON 2016",
+      "MQB_MK100 (5Q0 907)",
+      "ESC K"
      ]
     },
     "7A": {
-     "count": 10,
+     "count": 11,
      "vehicles": [
       "SEAT LEON 2013",
       "Audi A3 2014",
@@ -22993,7 +24557,8 @@
       "Volkswagen Passat B7 2015",
       "Volkswagen Passat B8 2016",
       "Volkswagen Golf 2016",
-      "Volkswagen Golf 2019"
+      "Volkswagen Golf 2019",
+      "ESC"
      ]
     },
     "00": {
@@ -23018,7 +24583,7 @@
      ]
     },
     "02": {
-     "count": 12,
+     "count": 19,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -23028,11 +24593,13 @@
       "Volkswagen Jetta 2024",
       "Volkswagen Tharu CS 2023",
       "Volkswagen Jetta 2023",
-      "Volkswagen Tiguan 2023"
+      "Volkswagen Tiguan 2023",
+      "ESC",
+      "ESC F"
      ]
     },
     "06": {
-     "count": 96,
+     "count": 104,
      "vehicles": [
       "Volkswagen Golf 2017",
       "Volkswagen Tiguan 2020",
@@ -23049,7 +24616,7 @@
      ]
     },
     "07": {
-     "count": 33,
+     "count": 34,
      "vehicles": [
       "Skoda Superb III 2017",
       "Skoda Superb III 2016",
@@ -23101,7 +24668,7 @@
    },
    "11": {
     "08": {
-     "count": 21,
+     "count": 23,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Golf 2015",
@@ -23118,7 +24685,7 @@
      ]
     },
     "04": {
-     "count": 9,
+     "count": 11,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Skoda Octavia 2019",
@@ -23128,11 +24695,13 @@
       "Volkswagen Jetta 2024",
       "Volkswagen Tiguan 2021",
       "Volkswagen Tharu CS 2023",
-      "SEAT LEON 2016"
+      "SEAT LEON 2016",
+      "MQB_MK100 (5Q0 907)",
+      "ESC K"
      ]
     },
     "07": {
-     "count": 14,
+     "count": 16,
      "vehicles": [
       "Volkswagen Tiguan 2019",
       "Skoda Octavia 2018",
@@ -23143,11 +24712,13 @@
       "Volkswagen Golf 2014",
       "Skoda Octavia 2020",
       "Skoda Karoq 2020",
-      "Volkswagen Tiguan 2021"
+      "Volkswagen Tiguan 2021",
+      "ESC",
+      "EMB8 EHCB"
      ]
     },
     "02": {
-     "count": 20,
+     "count": 21,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Tiguan 2020",
@@ -23164,7 +24735,7 @@
      ]
     },
     "06": {
-     "count": 15,
+     "count": 21,
      "vehicles": [
       "Volkswagen Golf 2019",
       "Skoda Octavia 2019",
@@ -23175,11 +24746,13 @@
       "Volkswagen Passat B7 2015",
       "Volkswagen Passat B8 2017",
       "Volkswagen Passat B8 2018",
-      "SEAT LEON 2020"
+      "SEAT LEON 2020",
+      "ESC",
+      "ESC K"
      ]
     },
     "05": {
-     "count": 14,
+     "count": 15,
      "vehicles": [
       "Volkswagen Golf 2017",
       "Skoda Kodiaq 2020",
@@ -23196,7 +24769,7 @@
      ]
     },
     "00": {
-     "count": 14,
+     "count": 16,
      "vehicles": [
       "Volkswagen Golf 2016",
       "Skoda Octavia 2015",
@@ -23270,10 +24843,12 @@
      ]
     },
     "81": {
-     "count": 4,
+     "count": 9,
      "vehicles": [
       "Volkswagen Golf 2015",
-      "Volkswagen Golf 2016"
+      "Volkswagen Golf 2016",
+      "ESC",
+      "ESC F"
      ]
     },
     "60": {
@@ -23308,7 +24883,7 @@
      ]
     },
     "62": {
-     "count": 22,
+     "count": 24,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "Skoda Kodiaq 2020",
@@ -23331,7 +24906,7 @@
      ]
     },
     "41": {
-     "count": 69,
+     "count": 77,
      "vehicles": [
       "Skoda Octavia 2015",
       "Skoda Octavia 2014",
@@ -23361,10 +24936,11 @@
      ]
     },
     "01": {
-     "count": 2,
+     "count": 3,
      "vehicles": [
       "SEAT LEON 2013",
-      "Volkswagen Golf 2013"
+      "Volkswagen Golf 2013",
+      "ESC"
      ]
     },
     "00": {
@@ -23415,7 +24991,7 @@
      ]
     },
     "CC": {
-     "count": 17,
+     "count": 18,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Skoda Octavia 2019",
@@ -23432,7 +25008,7 @@
      ]
     },
     "C3": {
-     "count": 17,
+     "count": 18,
      "vehicles": [
       "Volkswagen Tiguan 2019",
       "Skoda Octavia 2014",
@@ -23466,7 +25042,7 @@
      ]
     },
     "C5": {
-     "count": 19,
+     "count": 22,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2016",
@@ -23483,7 +25059,7 @@
      ]
     },
     "CB": {
-     "count": 15,
+     "count": 17,
      "vehicles": [
       "Volkswagen Golf 2019",
       "Skoda Octavia 2019",
@@ -23500,7 +25076,7 @@
      ]
     },
     "C7": {
-     "count": 14,
+     "count": 20,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "SEAT LEON 2013",
@@ -23511,11 +25087,13 @@
       "Volkswagen Golf 2013",
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2014",
-      "Volkswagen Tharu CS 2022"
+      "Volkswagen Tharu CS 2022",
+      "ESC",
+      "MQB_MK100 (5Q0 907)"
      ]
     },
     "C9": {
-     "count": 10,
+     "count": 11,
      "vehicles": [
       "Skoda Superb III 2018",
       "Skoda Superb III 2016",
@@ -23525,7 +25103,8 @@
       "Volkswagen Arteon 2018",
       "Volkswagen Golf 2014",
       "Volkswagen Tiguan 2017",
-      "Volkswagen Tiguan 2021"
+      "Volkswagen Tiguan 2021",
+      "ESC"
      ]
     },
     "C4": {
@@ -23542,7 +25121,7 @@
      ]
     },
     "CA": {
-     "count": 15,
+     "count": 17,
      "vehicles": [
       "Audi A3 2016",
       "Volkswagen T-Roc 2020",
@@ -23582,7 +25161,7 @@
      ]
     },
     "49": {
-     "count": 61,
+     "count": 62,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -23599,7 +25178,7 @@
      ]
     },
     "29": {
-     "count": 38,
+     "count": 44,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2017",
@@ -23625,7 +25204,7 @@
      ]
     },
     "25": {
-     "count": 23,
+     "count": 31,
      "vehicles": [
       "Volkswagen Golf 2016",
       "SEAT LEON 2017",
@@ -23642,7 +25221,7 @@
      ]
     },
     "24": {
-     "count": 12,
+     "count": 13,
      "vehicles": [
       "Skoda Octavia 2014",
       "Skoda Octavia 2018",
@@ -23654,7 +25233,8 @@
       "Skoda Octavia 2020",
       "SEAT ATECA 2022",
       "SEAT LEON 2019",
-      "SEAT LEON 2020"
+      "SEAT LEON 2020",
+      "MQB_MK100 (5Q0 907)"
      ]
     },
     "28": {
@@ -23701,9 +25281,10 @@
      ]
     },
     "B4": {
-     "count": 2,
+     "count": 4,
      "vehicles": [
-      "Volkswagen Golf 2015"
+      "Volkswagen Golf 2015",
+      "ESC"
      ]
     },
     "76": {
@@ -23726,9 +25307,10 @@
      ]
     },
     "B2": {
-     "count": 2,
+     "count": 6,
      "vehicles": [
-      "Volkswagen Golf 2016"
+      "Volkswagen Golf 2016",
+      "ESC"
      ]
     },
     "35": {
@@ -23764,10 +25346,11 @@
      ]
     },
     "31": {
-     "count": 3,
+     "count": 4,
      "vehicles": [
       "Skoda Kodiaq 2020",
-      "Volkswagen Tiguan 2020"
+      "Volkswagen Tiguan 2020",
+      "ESC K"
      ]
     },
     "F6": {
@@ -23783,16 +25366,18 @@
      ]
     },
     "B6": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Skoda Octavia 2014"
+      "Skoda Octavia 2014",
+      "ESC F"
      ]
     },
     "F4": {
-     "count": 6,
+     "count": 7,
      "vehicles": [
       "Skoda Octavia 2014",
-      "Skoda Octavia 2016"
+      "Skoda Octavia 2016",
+      "EMB8 EHCB"
      ]
     },
     "F5": {
@@ -23812,18 +25397,19 @@
      ]
     },
     "F2": {
-     "count": 8,
+     "count": 9,
      "vehicles": [
       "SEAT LEON 2013",
       "SEAT LEON 2014",
       "SEAT LEON 2016",
       "Audi A3 2014",
       "Audi A3 2015",
-      "Audi A3 2016"
+      "Audi A3 2016",
+      "ESC"
      ]
     },
     "73": {
-     "count": 11,
+     "count": 12,
      "vehicles": [
       "SEAT LEON 2017",
       "SEAT LEON 2018",
@@ -23834,7 +25420,8 @@
       "SEAT ATECA 2022",
       "SEAT LEON 2019",
       "Volkswagen T-Roc 2023",
-      "SEAT LEON 2020"
+      "SEAT LEON 2020",
+      "ESC K"
      ]
     },
     "77": {
@@ -23906,12 +25493,13 @@
      ]
     },
     "F3": {
-     "count": 14,
+     "count": 17,
      "vehicles": [
       "Volkswagen Golf 2013",
       "Volkswagen Golf 2014",
       "Volkswagen Golf 2015",
-      "Volkswagen Golf 2016"
+      "Volkswagen Golf 2016",
+      "ESC"
      ]
     },
     "33": {
@@ -23947,11 +25535,23 @@
       "Volkswagen Tharu CS 2022",
       "Volkswagen Tharu CS 2023"
      ]
+    },
+    "B3": {
+     "count": 1,
+     "vehicles": [
+      "ESC"
+     ]
+    },
+    "F0": {
+     "count": 1,
+     "vehicles": [
+      "MQB_MK100 (5Q0 907)"
+     ]
     }
    },
    "24": {
     "38": {
-     "count": 45,
+     "count": 46,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Skoda Superb III 2018",
@@ -23979,7 +25579,7 @@
      ]
     },
     "00": {
-     "count": 31,
+     "count": 39,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2017",
@@ -24004,7 +25604,7 @@
      ]
     },
     "14": {
-     "count": 12,
+     "count": 15,
      "vehicles": [
       "Volkswagen Golf 2016",
       "Skoda Octavia 2016",
@@ -24012,7 +25612,8 @@
       "Audi A3 2015",
       "Volkswagen Passat B7 2015",
       "Volkswagen Passat B8 2016",
-      "Volkswagen Jetta 2024"
+      "Volkswagen Jetta 2024",
+      "ESC"
      ]
     },
     "20": {
@@ -24028,13 +25629,14 @@
      ]
     },
     "34": {
-     "count": 5,
+     "count": 6,
      "vehicles": [
       "Skoda Octavia 2018",
       "Skoda Superb III 2017",
       "SEAT LEON 2017",
       "Volkswagen Passat B8 2017",
-      "Volkswagen Golf 2019"
+      "Volkswagen Golf 2019",
+      "ESC K"
      ]
     },
     "B6": {
@@ -24095,16 +25697,18 @@
      ]
     },
     "02": {
-     "count": 3,
+     "count": 4,
      "vehicles": [
-      "Audi A3 2016"
+      "Audi A3 2016",
+      "ESC"
      ]
     },
     "F8": {
-     "count": 2,
+     "count": 4,
      "vehicles": [
       "Volkswagen Golf 2014",
-      "Volkswagen Golf 2015"
+      "Volkswagen Golf 2015",
+      "ESC"
      ]
     },
     "01": {
@@ -24159,15 +25763,18 @@
      ]
     },
     "63": {
-     "count": 6,
+     "count": 14,
      "vehicles": [
       "Volkswagen Golf 2016",
       "Skoda Octavia 2016",
-      "Skoda Superb III 2017"
+      "Skoda Superb III 2017",
+      "ESC",
+      "EMB8 EHCB",
+      "ESC K"
      ]
     },
     "20": {
-     "count": 9,
+     "count": 11,
      "vehicles": [
       "Volkswagen Tiguan 2020",
       "Skoda Kodiaq 2020",
@@ -24176,11 +25783,13 @@
       "Volkswagen Golf 2014",
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2017",
-      "SEAT LEON 2020"
+      "SEAT LEON 2020",
+      "ESC F",
+      "ESC K"
      ]
     },
     "61": {
-     "count": 27,
+     "count": 29,
      "vehicles": [
       "Skoda Octavia 2018",
       "Skoda Octavia 2019",
@@ -24197,7 +25806,7 @@
      ]
     },
     "40": {
-     "count": 10,
+     "count": 12,
      "vehicles": [
       "Skoda Octavia 2014",
       "SEAT LEON 2018",
@@ -24205,7 +25814,9 @@
       "Volkswagen Passat B8 2016",
       "Volkswagen Golf 2014",
       "Volkswagen Tiguan 2017",
-      "Volkswagen Tiguan 2021"
+      "Volkswagen Tiguan 2021",
+      "ESC",
+      "MQB_MK100 (5Q0 907)"
      ]
     },
     "29": {
@@ -24234,7 +25845,7 @@
      ]
     },
     "62": {
-     "count": 27,
+     "count": 28,
      "vehicles": [
       "Volkswagen Tiguan 2017",
       "Volkswagen Tiguan 2021",
@@ -24246,7 +25857,8 @@
       "Volkswagen Arteon 2018",
       "Volkswagen Arteon 2019",
       "Volkswagen Arteon 2020",
-      "Volkswagen Golf 2016"
+      "Volkswagen Golf 2016",
+      "ESC"
      ]
     },
     "22": {
@@ -24303,11 +25915,17 @@
      "vehicles": [
       "Audi A3 Cabrio 2017"
      ]
+    },
+    "3A": {
+     "count": 1,
+     "vehicles": [
+      "ESC"
+     ]
     }
    },
    "26": {
     "50": {
-     "count": 59,
+     "count": 61,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Tiguan 2018",
@@ -24324,7 +25942,7 @@
      ]
     },
     "00": {
-     "count": 33,
+     "count": 42,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2016",
@@ -24341,7 +25959,7 @@
      ]
     },
     "F0": {
-     "count": 55,
+     "count": 60,
      "vehicles": [
       "Volkswagen Golf 2016",
       "Skoda Octavia 2019",
@@ -24393,11 +26011,12 @@
      ]
     },
     "50": {
-     "count": 5,
+     "count": 8,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2016",
-      "Volkswagen Golf 2019"
+      "Volkswagen Golf 2019",
+      "ESC"
      ]
     },
     "D1": {
@@ -24426,7 +26045,7 @@
      ]
     },
     "70": {
-     "count": 11,
+     "count": 13,
      "vehicles": [
       "Skoda Octavia 2018",
       "Skoda Octavia 2015",
@@ -24434,7 +26053,9 @@
       "Skoda Octavia 2014",
       "Skoda Octavia 2016",
       "Skoda Octavia 2017",
-      "SEAT LEON 2016"
+      "SEAT LEON 2016",
+      "EMB8 EHCB",
+      "MQB_MK100 (5Q0 907)"
      ]
     },
     "F1": {
@@ -24445,7 +26066,7 @@
      ]
     },
     "78": {
-     "count": 56,
+     "count": 60,
      "vehicles": [
       "Skoda Superb III 2018",
       "Skoda Kodiaq 2020",
@@ -24497,7 +26118,7 @@
      ]
     },
     "08": {
-     "count": 14,
+     "count": 15,
      "vehicles": [
       "Skoda Superb III 2016",
       "Volkswagen Passat B7 2015",
@@ -24506,7 +26127,8 @@
       "Volkswagen Arteon 2020",
       "Volkswagen Tiguan 2017",
       "Volkswagen Tiguan 2018",
-      "Volkswagen Tiguan 2021"
+      "Volkswagen Tiguan 2021",
+      "ESC K"
      ]
     },
     "20": {
@@ -24546,10 +26168,11 @@
      ]
     },
     "04": {
-     "count": 2,
+     "count": 3,
      "vehicles": [
       "Audi A3 2016",
-      "SEAT LEON 2019"
+      "SEAT LEON 2019",
+      "ESC"
      ]
     },
     "38": {
@@ -24596,11 +26219,29 @@
      "vehicles": [
       "Volkswagen Golf 2018"
      ]
+    },
+    "2A": {
+     "count": 1,
+     "vehicles": [
+      "ESC"
+     ]
+    },
+    "D2": {
+     "count": 3,
+     "vehicles": [
+      "ESC"
+     ]
+    },
+    "B4": {
+     "count": 1,
+     "vehicles": [
+      "ESC F"
+     ]
     }
    },
    "28": {
     "C2": {
-     "count": 48,
+     "count": 50,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Tiguan 2018",
@@ -24617,7 +26258,7 @@
      ]
     },
     "C0": {
-     "count": 39,
+     "count": 47,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2017",
@@ -24710,9 +26351,10 @@
      ]
     },
     "86": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Audi A3 2015"
+      "Audi A3 2015",
+      "ESC"
      ]
     },
     "00": {
@@ -24730,19 +26372,21 @@
      ]
     },
     "42": {
-     "count": 7,
+     "count": 8,
      "vehicles": [
       "Volkswagen Passat B8 2016",
       "Volkswagen Passat B8 2017",
       "Volkswagen Tiguan 2017",
       "Volkswagen Tiguan 2018",
-      "SEAT LEON 2019"
+      "SEAT LEON 2019",
+      "ESC K"
      ]
     },
     "6A": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Volkswagen Passat B8 2017"
+      "Volkswagen Passat B8 2017",
+      "ESC"
      ]
     },
     "D8": {
@@ -24772,9 +26416,10 @@
      ]
     },
     "C1": {
-     "count": 2,
+     "count": 3,
      "vehicles": [
-      "Volkswagen Golf 2014"
+      "Volkswagen Golf 2014",
+      "ESC"
      ]
     },
     "D6": {
@@ -24795,6 +26440,18 @@
      "vehicles": [
       "Volkswagen Golf 2019"
      ]
+    },
+    "06": {
+     "count": 1,
+     "vehicles": [
+      "ESC"
+     ]
+    },
+    "01": {
+     "count": 1,
+     "vehicles": [
+      "ESC F"
+     ]
     }
    },
    "29": {
@@ -24809,17 +26466,18 @@
      ]
     },
     "82": {
-     "count": 5,
+     "count": 6,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
       "Skoda Kodiaq 2020",
       "Volkswagen Passat B8 2016",
-      "Skoda Octavia 2020"
+      "Skoda Octavia 2020",
+      "ESC K"
      ]
     },
     "02": {
-     "count": 37,
+     "count": 43,
      "vehicles": [
       "Volkswagen Golf 2015",
       "Volkswagen Golf 2017",
@@ -24836,7 +26494,7 @@
      ]
     },
     "A9": {
-     "count": 20,
+     "count": 22,
      "vehicles": [
       "Volkswagen Golf 2019",
       "Skoda Octavia 2018",
@@ -24866,7 +26524,7 @@
      ]
     },
     "09": {
-     "count": 21,
+     "count": 23,
      "vehicles": [
       "Skoda Octavia 2019",
       "Skoda Octavia 2015",
@@ -24891,7 +26549,7 @@
      ]
     },
     "A2": {
-     "count": 10,
+     "count": 11,
      "vehicles": [
       "Skoda Superb III 2018",
       "Skoda Octavia 2019",
@@ -24900,7 +26558,8 @@
       "Volkswagen T-Roc 2020",
       "Volkswagen Arteon 2018",
       "Volkswagen Jetta 2024",
-      "SEAT LEON 2019"
+      "SEAT LEON 2019",
+      "ESC"
      ]
     },
     "F6": {
@@ -24943,7 +26602,7 @@
      ]
     },
     "08": {
-     "count": 12,
+     "count": 14,
      "vehicles": [
       "Audi A3 2014",
       "Audi A3 Cabrio 2020",
@@ -24951,7 +26610,8 @@
       "Audi A3 2015",
       "Volkswagen Golf 2017",
       "Volkswagen Golf 2015",
-      "Volkswagen Golf 2018"
+      "Volkswagen Golf 2018",
+      "ESC"
      ]
     },
     "00": {
@@ -24975,9 +26635,10 @@
      ]
     },
     "03": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Volkswagen Golf 2014"
+      "Volkswagen Golf 2014",
+      "ESC F"
      ]
     },
     "89": {
@@ -25014,7 +26675,7 @@
    },
    "30": {
     "42": {
-     "count": 24,
+     "count": 26,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Tiguan 2018",
@@ -25104,7 +26765,7 @@
    },
    "31": {
     "0B": {
-     "count": 55,
+     "count": 57,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Tiguan 2019",
@@ -25138,7 +26799,7 @@
    },
    "32": {
     "00": {
-     "count": 74,
+     "count": 76,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Tiguan 2018",
@@ -25224,11 +26885,23 @@
      "vehicles": [
       "SEAT LEON 2019"
      ]
+    },
+    "2E": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
+     ]
+    },
+    "0C": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
+     ]
     }
    },
    "34": {
     "64": {
-     "count": 10,
+     "count": 11,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Tiguan 2018",
@@ -25236,7 +26909,8 @@
       "Skoda Kodiaq 2018",
       "Skoda Kodiaq 2019",
       "Volkswagen Tiguan 2017",
-      "SEAT LEON 2019"
+      "SEAT LEON 2019",
+      "ESC K"
      ]
     },
     "00": {
@@ -25307,6 +26981,12 @@
      "vehicles": [
       "SEAT ATECA 2022"
      ]
+    },
+    "62": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
+     ]
     }
    },
    "35": {
@@ -25317,7 +26997,7 @@
      ]
     },
     "12": {
-     "count": 34,
+     "count": 36,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -25400,7 +27080,7 @@
    },
    "36": {
     "12": {
-     "count": 52,
+     "count": 53,
      "vehicles": [
       "Volkswagen Atlas 2019",
       "Volkswagen Golf 2019",
@@ -25417,7 +27097,7 @@
      ]
     },
     "1A": {
-     "count": 11,
+     "count": 12,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -25425,7 +27105,8 @@
       "Skoda Kodiaq 2020",
       "Skoda Kodiaq 2024",
       "Volkswagen Tiguan 2022",
-      "Volkswagen Tharu CS 2022"
+      "Volkswagen Tharu CS 2022",
+      "ESC K"
      ]
     },
     "1B": {
@@ -25525,6 +27206,18 @@
      "vehicles": [
       "Volkswagen Golf 2017"
      ]
+    },
+    "03": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
+     ]
+    },
+    "0B": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
+     ]
     }
    },
    "38": {
@@ -25603,6 +27296,18 @@
      "count": 1,
      "vehicles": [
       "Volkswagen Tharu CS 2023"
+     ]
+    },
+    "10": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
+     ]
+    },
+    "09": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
      ]
     }
    },
@@ -25705,6 +27410,18 @@
      "vehicles": [
       "SEAT LEON 2019"
      ]
+    },
+    "2F": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
+     ]
+    },
+    "5A": {
+     "count": 1,
+     "vehicles": [
+      "ESC K"
+     ]
     }
    },
    "40": {
@@ -25715,7 +27432,7 @@
      ]
     },
     "35": {
-     "count": 39,
+     "count": 41,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -25816,7 +27533,7 @@
      ]
     },
     "35": {
-     "count": 65,
+     "count": 67,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -25872,7 +27589,7 @@
      ]
     },
     "19": {
-     "count": 39,
+     "count": 41,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -25945,7 +27662,7 @@
      ]
     },
     "19": {
-     "count": 65,
+     "count": 67,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -25996,7 +27713,7 @@
      ]
     },
     "32": {
-     "count": 39,
+     "count": 41,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -26064,7 +27781,7 @@
      ]
     },
     "32": {
-     "count": 65,
+     "count": 67,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -26120,7 +27837,7 @@
      ]
     },
     "00": {
-     "count": 40,
+     "count": 42,
      "vehicles": [
       "Volkswagen Tiguan 2018",
       "Volkswagen Tiguan 2019",
@@ -27568,10 +29285,11 @@
      ]
     },
     "A1": {
-     "count": 6,
+     "count": 7,
      "vehicles": [
       "Volkswagen Jetta 2016",
-      "Volkswagen Jetta 2017"
+      "Volkswagen Jetta 2017",
+      "ESP MK60EC1"
      ]
     },
     "A4": {
@@ -27583,21 +29301,24 @@
      ]
     },
     "B1": {
-     "count": 2,
+     "count": 3,
      "vehicles": [
       "Volkswagen Jetta 2011",
-      "Volkswagen Jetta 2013"
+      "Volkswagen Jetta 2013",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "14": {
-     "count": 18,
+     "count": 21,
      "vehicles": [
       "Volkswagen Golf Plus 2012",
       "Skoda Octavia II 2010",
       "Volkswagen Caddy GP2 2019",
       "Volkswagen Golf 2009",
       "Volkswagen Jetta 2010",
-      "Volkswagen Golf Plus 2011"
+      "Volkswagen Golf Plus 2011",
+      "ESP MK60EC1",
+      "ESP MK60EC1 C"
      ]
     },
     "F1": {
@@ -27613,11 +29334,12 @@
      ]
     },
     "84": {
-     "count": 3,
+     "count": 6,
      "vehicles": [
       "Skoda Superb II 2013",
       "Skoda Superb II 2014",
-      "Skoda Superb II 2012"
+      "Skoda Superb II 2012",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "86": {
@@ -27627,7 +29349,7 @@
      ]
     },
     "11": {
-     "count": 10,
+     "count": 19,
      "vehicles": [
       "Skoda Octavia II 2008",
       "Audi A3 2012",
@@ -27635,14 +29357,20 @@
       "Volkswagen Jetta 2013",
       "Volkswagen Golf 2008",
       "Volkswagen Jetta 2010",
-      "Skoda Citigo-e iV 2022"
+      "Skoda Citigo-e iV 2022",
+      "ESP MK60EC1 9",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 A",
+      "ESP MK60EC1 B",
+      "ESP MK60EC1"
      ]
     },
     "91": {
-     "count": 3,
+     "count": 4,
      "vehicles": [
       "Skoda Yeti 2011",
-      "Skoda Yeti 2017"
+      "Skoda Yeti 2017",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "41": {
@@ -27711,11 +29439,12 @@
      ]
     },
     "16": {
-     "count": 5,
+     "count": 6,
      "vehicles": [
       "Volkswagen Golf 2009",
       "Volkswagen Golf Plus 2011",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1"
      ]
     },
     "24": {
@@ -27743,11 +29472,23 @@
      "vehicles": [
       "Volkswagen Passat US 2021"
      ]
+    },
+    "76": {
+     "count": 1,
+     "vehicles": [
+      "ESP MK60EC1"
+     ]
+    },
+    "46": {
+     "count": 1,
+     "vehicles": [
+      "ESP MK60EC1"
+     ]
     }
    },
    "1": {
     "4B": {
-     "count": 35,
+     "count": 41,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2015",
@@ -27758,11 +29499,13 @@
       "Volkswagen Jetta 2017",
       "Volkswagen Jetta 2011",
       "Volkswagen Jetta 2013",
-      "Volkswagen Eos 2012"
+      "Volkswagen Eos 2012",
+      "ESP MK60EC1 A",
+      "ESP MK60EC1 B"
      ]
     },
     "3B": {
-     "count": 38,
+     "count": 47,
      "vehicles": [
       "Volkswagen Golf Cabrio 2014",
       "Volkswagen Golf Cabrio 2013",
@@ -27791,20 +29534,22 @@
      ]
     },
     "3D": {
-     "count": 4,
+     "count": 7,
      "vehicles": [
       "Skoda Superb II 2013",
       "Skoda Superb II 2010",
       "Skoda Superb II 2014",
-      "Skoda Superb II 2012"
+      "Skoda Superb II 2012",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "3F": {
-     "count": 4,
+     "count": 5,
      "vehicles": [
       "Skoda Yeti 2011",
       "SEAT ALTEA 2015",
-      "Skoda Yeti 2017"
+      "Skoda Yeti 2017",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "01": {
@@ -27829,10 +29574,11 @@
      ]
     },
     "42": {
-     "count": 2,
+     "count": 3,
      "vehicles": [
       "Audi A3 2012",
-      "Audi A3 2009"
+      "Audi A3 2009",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "00": {
@@ -27884,6 +29630,12 @@
      "vehicles": [
       "Volkswagen Passat US 2021"
      ]
+    },
+    "3C": {
+     "count": 1,
+     "vehicles": [
+      "ESP MK60EC1"
+     ]
     }
    },
    "2": {
@@ -27898,7 +29650,7 @@
      ]
     },
     "40": {
-     "count": 24,
+     "count": 30,
      "vehicles": [
       "Volkswagen Jetta 2016",
       "Volkswagen Golf Cabrio 2014",
@@ -27915,7 +29667,7 @@
      ]
     },
     "60": {
-     "count": 22,
+     "count": 30,
      "vehicles": [
       "Volkswagen Jetta 2017",
       "Skoda Superb II 2013",
@@ -27932,7 +29684,7 @@
      ]
     },
     "20": {
-     "count": 10,
+     "count": 15,
      "vehicles": [
       "Volkswagen Golf Cabrio 2013",
       "Skoda Octavia II 2008",
@@ -27940,7 +29692,8 @@
       "Volkswagen Golf 2008",
       "Volkswagen Jetta 2010",
       "Volkswagen Golf Plus 2014",
-      "Skoda Yeti 2017"
+      "Skoda Yeti 2017",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "24": {
@@ -27965,11 +29718,13 @@
      ]
     },
     "80": {
-     "count": 4,
+     "count": 6,
      "vehicles": [
       "Skoda Superb II 2012",
       "Volkswagen Golf 2009",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1 C",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "28": {
@@ -28031,23 +29786,29 @@
    },
    "3": {
     "F5": {
-     "count": 26,
+     "count": 27,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2015",
       "Volkswagen Passat NMS 2017",
       "Volkswagen Passat NMS 2013",
       "Volkswagen Passat NMS 2012",
-      "Volkswagen Scirocco 2009"
+      "Volkswagen Scirocco 2009",
+      "ESP MK60EC1"
      ]
     },
     "0C": {
-     "count": 9,
+     "count": 15,
      "vehicles": [
       "Volkswagen Jetta 2016",
       "Volkswagen Jetta 2017",
       "Volkswagen Jetta 2011",
-      "Volkswagen Jetta 2013"
+      "Volkswagen Jetta 2013",
+      "ESP MK60EC1 A",
+      "ESP MK60EC1 B",
+      "ESP MK60EC1 C",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "F8": {
@@ -28059,14 +29820,16 @@
      ]
     },
     "0D": {
-     "count": 20,
+     "count": 23,
      "vehicles": [
       "Volkswagen Golf Plus 2012",
       "Volkswagen Golf 2009",
       "Volkswagen Golf 2008",
       "Volkswagen Jetta 2010",
       "Volkswagen Golf Plus 2011",
-      "Volkswagen Golf Plus 2014"
+      "Volkswagen Golf Plus 2014",
+      "ESP MK60EC1 9",
+      "ESP MK60EC1"
      ]
     },
     "8D": {
@@ -28082,28 +29845,32 @@
      ]
     },
     "16": {
-     "count": 7,
+     "count": 10,
      "vehicles": [
       "Skoda Superb II 2013",
       "Skoda Superb II 2010",
       "Skoda Superb II 2014",
       "Skoda Superb II 2012",
-      "Volkswagen Touran 2015"
+      "Volkswagen Touran 2015",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "1C": {
-     "count": 10,
+     "count": 16,
      "vehicles": [
       "Skoda Octavia II 2008",
       "Skoda Octavia II 2013",
-      "Skoda Octavia II 2010"
+      "Skoda Octavia II 2010",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "0E": {
-     "count": 3,
+     "count": 4,
      "vehicles": [
       "Skoda Yeti 2011",
-      "Skoda Yeti 2017"
+      "Skoda Yeti 2017",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "DB": {
@@ -28122,11 +29889,12 @@
      ]
     },
     "12": {
-     "count": 3,
+     "count": 4,
      "vehicles": [
       "SEAT ALTEA 2015",
       "Audi A3 2012",
-      "Audi A3 2009"
+      "Audi A3 2009",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "00": {
@@ -28200,7 +29968,7 @@
    },
    "4": {
     "49": {
-     "count": 35,
+     "count": 44,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2015",
@@ -28211,7 +29979,9 @@
       "Volkswagen Jetta 2017",
       "Volkswagen Jetta 2013",
       "Volkswagen Eos 2012",
-      "Volkswagen Amarok 2022"
+      "Volkswagen Amarok 2022",
+      "ESP MK60EC1 9",
+      "ESP MK60EC1"
      ]
     },
     "89": {
@@ -28223,7 +29993,7 @@
      ]
     },
     "09": {
-     "count": 38,
+     "count": 49,
      "vehicles": [
       "Volkswagen Golf Cabrio 2013",
       "Skoda Superb II 2013",
@@ -28347,21 +30117,29 @@
      "vehicles": [
       "Skoda Citigo-e iV 2022"
      ]
+    },
+    "19": {
+     "count": 1,
+     "vehicles": [
+      "COMPACT_1K0 (1K0 907)"
+     ]
     }
    },
    "5": {
     "26": {
-     "count": 5,
+     "count": 8,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2017",
       "Skoda Octavia II 2008",
       "Volkswagen Touareg 2013",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "22": {
-     "count": 31,
+     "count": 33,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Volkswagen Passat NMS 2013",
@@ -28378,7 +30156,7 @@
      ]
     },
     "23": {
-     "count": 12,
+     "count": 17,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Skoda Superb II 2012",
@@ -28387,7 +30165,11 @@
       "Volkswagen Scirocco 2009",
       "Volkswagen Golf 2008",
       "Volkswagen Golf Plus 2011",
-      "Skoda Yeti 2017"
+      "Skoda Yeti 2017",
+      "ESP MK60EC1 9",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 A",
+      "ESP MK60EC1"
      ]
     },
     "29": {
@@ -28405,25 +30187,28 @@
      ]
     },
     "24": {
-     "count": 6,
+     "count": 9,
      "vehicles": [
       "Volkswagen Passat NMS 2017",
       "Volkswagen Jetta 2016",
       "Volkswagen Fox 2016",
       "Skoda Superb II 2013",
       "Skoda Octavia II 2013",
-      "Volkswagen Golf 2009"
+      "Volkswagen Golf 2009",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "28": {
-     "count": 6,
+     "count": 8,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Golf Cabrio 2013",
       "Volkswagen Jetta 2011",
       "Skoda Yeti 2011",
       "Volkswagen Jetta 2013",
-      "Volkswagen Jetta 2010"
+      "Volkswagen Jetta 2010",
+      "ESP MK60EC1",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "27": {
@@ -28436,15 +30221,16 @@
      ]
     },
     "2B": {
-     "count": 7,
+     "count": 8,
      "vehicles": [
       "Volkswagen Jetta 2016",
       "Volkswagen Touran 2015",
-      "Volkswagen Jetta 2010"
+      "Volkswagen Jetta 2010",
+      "ESP MK60EC1"
      ]
     },
     "25": {
-     "count": 10,
+     "count": 15,
      "vehicles": [
       "Volkswagen Golf Cabrio 2014",
       "Volkswagen Jetta 2013",
@@ -28452,7 +30238,11 @@
       "Volkswagen Golf 2009",
       "Volkswagen Jetta 2010",
       "Volkswagen Golf Plus 2012",
-      "Volkswagen Polo 2014"
+      "Volkswagen Polo 2014",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1",
+      "ESP MK60EC1 B",
+      "ESP MK60EC1 C"
      ]
     },
     "B1": {
@@ -28536,7 +30326,7 @@
    },
    "6": {
     "00": {
-     "count": 74,
+     "count": 90,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2015",
@@ -28553,23 +30343,26 @@
      ]
     },
     "08": {
-     "count": 6,
+     "count": 7,
      "vehicles": [
       "Volkswagen Passat NMS 2013",
       "Volkswagen Passat NMS 2012",
       "Volkswagen Golf Cabrio 2014",
       "Volkswagen Jetta 2011",
-      "Skoda Rapid China 2016"
+      "Skoda Rapid China 2016",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "80": {
-     "count": 8,
+     "count": 10,
      "vehicles": [
       "Volkswagen Jetta 2013",
       "Skoda Superb II 2012",
       "Volkswagen Eos 2012",
       "Volkswagen Golf Plus 2011",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1 C",
+      "ESP MK60EC1"
      ]
     },
     "33": {
@@ -28647,11 +30440,23 @@
      "vehicles": [
       "Volkswagen Passat US 2021"
      ]
+    },
+    "03": {
+     "count": 1,
+     "vehicles": [
+      "ESP MK60EC1"
+     ]
+    },
+    "01": {
+     "count": 1,
+     "vehicles": [
+      "COMPACT_1K0 (1K0 907)"
+     ]
     }
    },
    "7": {
     "00": {
-     "count": 14,
+     "count": 18,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2013",
@@ -28663,20 +30468,22 @@
       "Volkswagen Golf Plus 2012",
       "Volkswagen Polo 2010",
       "Skoda Citigo 2012",
-      "Volkswagen Polo 2013"
+      "Volkswagen Polo 2013",
+      "ESP MK60EC1"
      ]
     },
     "02": {
-     "count": 15,
+     "count": 16,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "SEAT ALTEA 2015",
       "Audi A3 2012",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1"
      ]
     },
     "FD": {
-     "count": 9,
+     "count": 11,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Volkswagen Jetta 2016",
@@ -28685,17 +30492,21 @@
       "Skoda Yeti 2011",
       "Skoda Octavia II 2013",
       "Audi A3 2009",
-      "Volkswagen Golf Plus 2011"
+      "Volkswagen Golf Plus 2011",
+      "ESP MK60EC1 B",
+      "ESP MK60EC1"
      ]
     },
     "FB": {
-     "count": 13,
+     "count": 17,
      "vehicles": [
       "Volkswagen Passat NMS 2017",
       "Skoda Octavia II 2010",
       "Volkswagen Touran 2015",
       "Volkswagen Golf 2009",
-      "Volkswagen Jetta 2010"
+      "Volkswagen Jetta 2010",
+      "ESP MK60EC1",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "FA": {
@@ -28711,41 +30522,47 @@
      ]
     },
     "FE": {
-     "count": 6,
+     "count": 8,
      "vehicles": [
       "Volkswagen Passat NMS 2017",
       "Volkswagen Jetta 2011",
       "Volkswagen Golf Plus 2011",
-      "Volkswagen Golf Cabrio 2016"
+      "Volkswagen Golf Cabrio 2016",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "01": {
-     "count": 9,
+     "count": 11,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Jetta 2017",
       "Volkswagen Jetta 2013",
       "Volkswagen Golf Plus 2012",
       "Volkswagen Golf 2009",
-      "Volkswagen Jetta 2010"
+      "Volkswagen Jetta 2010",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 C"
      ]
     },
     "FF": {
-     "count": 6,
+     "count": 7,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Golf Cabrio 2014",
       "Skoda Superb II 2014",
       "Volkswagen Golf Plus 2011",
-      "Skoda Yeti 2017"
+      "Skoda Yeti 2017",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "03": {
-     "count": 6,
+     "count": 8,
      "vehicles": [
       "Volkswagen Jetta 2016",
       "Volkswagen Golf 2008",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "C7": {
@@ -28761,12 +30578,14 @@
      ]
     },
     "FC": {
-     "count": 5,
+     "count": 8,
      "vehicles": [
       "Skoda Superb II 2010",
       "Volkswagen Touran 2015",
       "Volkswagen Scirocco 2009",
-      "Volkswagen Jetta 2010"
+      "Volkswagen Jetta 2010",
+      "ESP MK60EC1 9",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "B3": {
@@ -28857,7 +30676,7 @@
    },
    "9": {
     "0E": {
-     "count": 15,
+     "count": 16,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2015",
@@ -28874,20 +30693,25 @@
      ]
     },
     "12": {
-     "count": 13,
+     "count": 16,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
-      "Volkswagen Golf 2009"
+      "Volkswagen Golf 2009",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 A",
+      "ESP MK60EC1"
      ]
     },
     "0B": {
-     "count": 12,
+     "count": 16,
      "vehicles": [
       "Volkswagen Passat NMS 2017",
       "Volkswagen Jetta 2011",
       "Volkswagen Golf Plus 2012",
       "Skoda Superb II 2012",
-      "Skoda Octavia II 2010"
+      "Skoda Octavia II 2010",
+      "ESP MK60EC1",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "0D": {
@@ -28899,12 +30723,14 @@
      ]
     },
     "11": {
-     "count": 4,
+     "count": 6,
      "vehicles": [
       "Volkswagen Passat NMS 2012",
       "Volkswagen Jetta 2016",
       "Skoda Superb II 2013",
-      "Volkswagen Golf Plus 2014"
+      "Volkswagen Golf Plus 2014",
+      "ESP MK60EC1",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "14": {
@@ -28921,23 +30747,26 @@
      ]
     },
     "10": {
-     "count": 11,
+     "count": 12,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Jetta 2016",
       "Volkswagen Golf Cabrio 2013",
       "Volkswagen Jetta 2013",
       "Skoda Superb II 2010",
-      "Volkswagen Touran 2015"
+      "Volkswagen Touran 2015",
+      "ESP MK60EC1 C"
      ]
     },
     "0C": {
-     "count": 4,
+     "count": 7,
      "vehicles": [
       "Volkswagen Jetta 2017",
       "Volkswagen Golf Cabrio 2014",
       "Skoda Superb II 2014",
-      "Volkswagen Touran 2015"
+      "Volkswagen Touran 2015",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "17": {
@@ -29003,17 +30832,22 @@
      ]
     },
     "13": {
-     "count": 4,
+     "count": 7,
      "vehicles": [
       "Volkswagen Golf 2008",
-      "Volkswagen Golf Plus 2011"
+      "Volkswagen Golf Plus 2011",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 B"
      ]
     },
     "0F": {
-     "count": 4,
+     "count": 8,
      "vehicles": [
       "Volkswagen Jetta 2010",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1 9",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "26": {
@@ -29061,7 +30895,7 @@
    },
    "11": {
     "E9": {
-     "count": 13,
+     "count": 16,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2012",
@@ -29071,11 +30905,13 @@
       "Volkswagen Touran 2015",
       "Volkswagen Jetta 2013",
       "Volkswagen Golf Plus 2014",
-      "Volkswagen Golf Cabrio 2016"
+      "Volkswagen Golf Cabrio 2016",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 A"
      ]
     },
     "E8": {
-     "count": 19,
+     "count": 23,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Volkswagen Passat NMS 2012",
@@ -29083,11 +30919,13 @@
       "Volkswagen Golf Plus 2012",
       "Skoda Octavia II 2008",
       "Skoda Superb II 2012",
-      "Volkswagen Golf 2008"
+      "Volkswagen Golf 2008",
+      "ESP MK60EC1",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "E4": {
-     "count": 10,
+     "count": 12,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Volkswagen Jetta 2017",
@@ -29095,34 +30933,40 @@
       "Volkswagen Jetta 2013",
       "Volkswagen Eos 2012",
       "Volkswagen Golf Plus 2011",
-      "Skoda Yeti 2017"
+      "Skoda Yeti 2017",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "EA": {
-     "count": 4,
+     "count": 5,
      "vehicles": [
       "Volkswagen Passat NMS 2017",
       "Volkswagen Passat NMS 2016",
       "Skoda Superb II 2010",
-      "Volkswagen Polo 2012"
+      "Volkswagen Polo 2012",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "EB": {
-     "count": 10,
+     "count": 13,
      "vehicles": [
       "Volkswagen Passat NMS 2013",
       "Volkswagen Passat NMS 2015",
       "Skoda Superb II 2013",
       "SEAT ALTEA 2015",
       "Volkswagen Jetta 2010",
-      "Volkswagen Golf Plus 2011"
+      "Volkswagen Golf Plus 2011",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "EC": {
-     "count": 3,
+     "count": 5,
      "vehicles": [
       "Volkswagen Passat NMS 2017",
-      "Volkswagen Golf 2009"
+      "Volkswagen Golf 2009",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 C"
      ]
     },
     "ED": {
@@ -29148,23 +30992,25 @@
      ]
     },
     "E5": {
-     "count": 4,
+     "count": 5,
      "vehicles": [
       "Skoda Superb II 2014",
       "Volkswagen Scirocco 2009",
       "Volkswagen Golf 2008",
-      "Volkswagen Golf 2009"
+      "Volkswagen Golf 2009",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "E7": {
-     "count": 13,
+     "count": 15,
      "vehicles": [
       "Skoda Yeti 2011",
       "Skoda Octavia II 2010",
       "SEAT IBIZA SC 3d 2010",
       "Audi A3 2009",
       "Volkswagen Touran 2015",
-      "Volkswagen Polo 2012"
+      "Volkswagen Polo 2012",
+      "ESP MK60EC1"
      ]
     },
     "E2": {
@@ -29217,9 +31063,12 @@
      ]
     },
     "E6": {
-     "count": 2,
+     "count": 5,
      "vehicles": [
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1 9",
+      "ESP MK60EC1 B",
+      "ESP MK60EC1"
      ]
     },
     "71": {
@@ -29255,7 +31104,7 @@
    },
    "13": {
     "20": {
-     "count": 8,
+     "count": 10,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2013",
@@ -29263,27 +31112,33 @@
       "Volkswagen Jetta 2013",
       "Skoda Yeti 2011",
       "Volkswagen Golf 2008",
-      "Volkswagen Golf Plus 2011"
+      "Volkswagen Golf Plus 2011",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "1F": {
-     "count": 14,
+     "count": 17,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Volkswagen Passat NMS 2017",
       "Volkswagen Passat NMS 2016",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "21": {
-     "count": 10,
+     "count": 14,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Volkswagen Passat NMS 2012",
       "Volkswagen Golf Cabrio 2014",
       "SEAT ALTEA 2015",
       "Volkswagen Golf Plus 2012",
-      "Skoda Yeti 2017"
+      "Skoda Yeti 2017",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 B",
+      "ESP MK60EC1"
      ]
     },
     "1A": {
@@ -29298,7 +31153,7 @@
      ]
     },
     "1C": {
-     "count": 20,
+     "count": 23,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Jetta 2016",
@@ -29308,42 +31163,51 @@
       "Audi A3 2012",
       "Volkswagen Eos 2012",
       "Volkswagen Golf 2009",
-      "Volkswagen Jetta 2010"
+      "Volkswagen Jetta 2010",
+      "ESP MK60EC1",
+      "ESP MK60EC1 A"
      ]
     },
     "19": {
-     "count": 4,
+     "count": 7,
      "vehicles": [
       "Volkswagen Jetta 2016",
       "Skoda Octavia II 2013",
-      "Volkswagen Golf Cabrio 2016"
+      "Volkswagen Golf Cabrio 2016",
+      "ESP MK60EC1 9",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "22": {
-     "count": 3,
+     "count": 5,
      "vehicles": [
       "Volkswagen Jetta 2017",
       "Skoda Superb II 2013",
-      "Volkswagen Scirocco 2009"
+      "Volkswagen Scirocco 2009",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 C"
      ]
     },
     "1D": {
-     "count": 4,
+     "count": 6,
      "vehicles": [
       "Volkswagen Jetta 2016",
       "Volkswagen Golf Plus 2011",
-      "Volkswagen Golf Plus 2014"
+      "Volkswagen Golf Plus 2014",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "1E": {
-     "count": 7,
+     "count": 8,
      "vehicles": [
       "Volkswagen Golf Plus 2012",
       "Skoda Superb II 2014",
       "Audi A3 2009",
       "Volkswagen Golf 2009",
       "Volkswagen Jetta 2010",
-      "Volkswagen Golf Plus 2011"
+      "Volkswagen Golf Plus 2011",
+      "ESP MK60EC1"
      ]
     },
     "52": {
@@ -29361,11 +31225,12 @@
      ]
     },
     "1B": {
-     "count": 3,
+     "count": 4,
      "vehicles": [
       "Skoda Octavia II 2008",
       "Volkswagen Touran 2015",
-      "Volkswagen Golf 2008"
+      "Volkswagen Golf 2008",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "D2": {
@@ -29451,7 +31316,7 @@
    },
    "15": {
     "41": {
-     "count": 38,
+     "count": 46,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2015",
@@ -29468,22 +31333,28 @@
      ]
     },
     "61": {
-     "count": 5,
+     "count": 6,
      "vehicles": [
       "Volkswagen Passat NMS 2013",
       "Volkswagen Passat NMS 2012",
       "Volkswagen Golf Cabrio 2014",
-      "Volkswagen Jetta 2013"
+      "Volkswagen Jetta 2013",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "42": {
-     "count": 15,
+     "count": 21,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Volkswagen Passat NMS 2016",
       "Skoda Octavia II 2010",
       "Audi A3 2009",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1 9",
+      "ESP MK60EC1 A",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1 B",
+      "ESP MK60EC1"
      ]
     },
     "40": {
@@ -29527,10 +31398,11 @@
      ]
     },
     "82": {
-     "count": 2,
+     "count": 5,
      "vehicles": [
       "Skoda Octavia II 2013",
-      "SEAT IBIZA SC 3d 2010"
+      "SEAT IBIZA SC 3d 2010",
+      "ESP MK60EC1"
      ]
     },
     "00": {
@@ -29601,15 +31473,28 @@
      "vehicles": [
       "Skoda Citigo-e iV 2022"
      ]
+    },
+    "62": {
+     "count": 2,
+     "vehicles": [
+      "ESP MK60EC1"
+     ]
+    },
+    "49": {
+     "count": 1,
+     "vehicles": [
+      "COMPACT_1K0 (1K0 907)"
+     ]
     }
    },
    "16": {
     "20": {
-     "count": 7,
+     "count": 8,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2017",
-      "Volkswagen Jetta 2016"
+      "Volkswagen Jetta 2016",
+      "ESP MK60EC1"
      ]
     },
     "A1": {
@@ -29624,12 +31509,13 @@
      ]
     },
     "A5": {
-     "count": 12,
+     "count": 13,
      "vehicles": [
       "Volkswagen Passat NMS 2015",
       "Volkswagen Golf Cabrio 2013",
       "Volkswagen Touran 2015",
-      "Volkswagen Golf 2008"
+      "Volkswagen Golf 2008",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "A0": {
@@ -29674,31 +31560,36 @@
      ]
     },
     "B7": {
-     "count": 2,
+     "count": 4,
      "vehicles": [
       "Volkswagen Jetta 2011",
-      "Volkswagen Jetta 2013"
+      "Volkswagen Jetta 2013",
+      "ESP MK60EC1 B",
+      "ESP MK60EC1 C"
      ]
     },
     "A7": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Volkswagen Jetta 2013"
+      "Volkswagen Jetta 2013",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "35": {
-     "count": 5,
+     "count": 6,
      "vehicles": [
       "Volkswagen Golf Plus 2012",
       "Skoda Superb II 2010",
       "Skoda Superb II 2012",
-      "Volkswagen Golf 2008"
+      "Volkswagen Golf 2008",
+      "ESP MK60EC1"
      ]
     },
     "38": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Volkswagen Fox 2016"
+      "Volkswagen Fox 2016",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "58": {
@@ -29708,29 +31599,35 @@
      ]
     },
     "34": {
-     "count": 9,
+     "count": 14,
      "vehicles": [
       "Skoda Superb II 2013",
       "Skoda Octavia II 2010",
-      "Volkswagen Golf 2009"
+      "Volkswagen Golf 2009",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "28": {
-     "count": 2,
+     "count": 3,
      "vehicles": [
       "Skoda Octavia II 2008",
-      "Volkswagen Caddy GP2 2016"
+      "Volkswagen Caddy GP2 2016",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "31": {
-     "count": 10,
+     "count": 13,
      "vehicles": [
       "Skoda Yeti 2011",
       "Skoda Octavia II 2013",
       "Volkswagen Eos 2012",
       "Volkswagen Jetta 2010",
       "Volkswagen Golf Plus 2011",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "ESP MK60EC1 A",
+      "ESP MK60EC1",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "13": {
@@ -29740,9 +31637,10 @@
      ]
     },
     "3E": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Skoda Octavia II 2010"
+      "Skoda Octavia II 2010",
+      "ESP MK60EC1"
      ]
     },
     "59": {
@@ -29789,10 +31687,12 @@
      ]
     },
     "30": {
-     "count": 3,
+     "count": 6,
      "vehicles": [
       "Volkswagen Scirocco 2009",
-      "Volkswagen Jetta 2010"
+      "Volkswagen Jetta 2010",
+      "ESP MK60EC1 9",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "81": {
@@ -29836,11 +31736,17 @@
      "vehicles": [
       "Skoda Citigo-e iV 2022"
      ]
+    },
+    "87": {
+     "count": 1,
+     "vehicles": [
+      "ESP MK60EC1"
+     ]
     }
    },
    "17": {
     "10": {
-     "count": 20,
+     "count": 21,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2015",
@@ -29849,7 +31755,8 @@
       "Volkswagen Jetta 2016",
       "Volkswagen Golf Cabrio 2014",
       "Volkswagen Jetta 2013",
-      "Volkswagen Golf Cabrio 2016"
+      "Volkswagen Golf Cabrio 2016",
+      "ESP MK60EC1"
      ]
     },
     "1C": {
@@ -29892,14 +31799,15 @@
      ]
     },
     "04": {
-     "count": 2,
+     "count": 3,
      "vehicles": [
       "Volkswagen Jetta 2011",
-      "Skoda Octavia II 2010"
+      "Skoda Octavia II 2010",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "00": {
-     "count": 38,
+     "count": 52,
      "vehicles": [
       "Volkswagen Golf Plus 2012",
       "Volkswagen Fox 2016",
@@ -29916,25 +31824,28 @@
      ]
     },
     "08": {
-     "count": 11,
+     "count": 14,
      "vehicles": [
       "Skoda Rapid China 2016",
       "Skoda Octavia II 2010",
       "Volkswagen Eos 2012",
       "Volkswagen Jetta 2013",
       "Volkswagen Golf Plus 2011",
-      "Volkswagen Golf Plus 2012"
+      "Volkswagen Golf Plus 2012",
+      "COMPACT_1K0 (1K0 907)",
+      "ESP MK60EC1"
      ]
     },
     "0C": {
-     "count": 8,
+     "count": 9,
      "vehicles": [
       "Skoda Superb II 2012",
       "Skoda Octavia II 2010",
       "SEAT ALTEA 2015",
       "Audi A3 2012",
       "Volkswagen Touran 2015",
-      "Volkswagen Golf Plus 2011"
+      "Volkswagen Golf Plus 2011",
+      "ESP MK60EC1"
      ]
     },
     "01": {
@@ -29965,11 +31876,17 @@
      "vehicles": [
       "Volkswagen Passat US 2021"
      ]
+    },
+    "32": {
+     "count": 1,
+     "vehicles": [
+      "ESP MK60EC1"
+     ]
     }
    },
    "18": {
     "00": {
-     "count": 72,
+     "count": 90,
      "vehicles": [
       "Volkswagen Passat NMS 2016",
       "Volkswagen Passat NMS 2015",
@@ -29998,12 +31915,13 @@
      ]
     },
     "50": {
-     "count": 6,
+     "count": 7,
      "vehicles": [
       "Volkswagen Touran 2015",
       "Volkswagen Golf 2008",
       "Volkswagen Jetta 2010",
-      "Volkswagen Golf Plus 2014"
+      "Volkswagen Golf Plus 2014",
+      "COMPACT_1K0 (1K0 907)"
      ]
     }
    },
@@ -30031,16 +31949,18 @@
      ]
     },
     "10": {
-     "count": 1,
+     "count": 2,
      "vehicles": [
-      "Volkswagen Golf Cabrio 2014"
+      "Volkswagen Golf Cabrio 2014",
+      "ESP MK60EC1"
      ]
     },
     "73": {
-     "count": 3,
+     "count": 4,
      "vehicles": [
       "Volkswagen Golf Cabrio 2013",
-      "Volkswagen Touran 2015"
+      "Volkswagen Touran 2015",
+      "COMPACT_1K0 (1K0 907)"
      ]
     },
     "23": {
@@ -33431,14 +35351,38 @@
   }
  },
  "statistics": {
-  "total_records_fetched": 544,
-  "records_with_coding": 470,
-  "records_complete": 326,
-  "records_partial": 144,
-  "assigned_to_family": 326,
-  "unassigned": 0,
-  "unique_codings": 277,
-  "families": 13
+  "observations_total": 363,
+  "observations_baseline": 326,
+  "observations_added": 37,
+  "unique_codings": 314,
+  "families": 13,
+  "sources": 6,
+  "total_records_fetched": 1474,
+  "records_with_coding": 363,
+  "records_complete": 363,
+  "records_partial": 0,
+  "assigned_to_family": 363,
+  "unassigned": 3,
+  "mirror_checks": 2309,
+  "mirror_ok": 2308,
+  "filter_accounting": {
+   "pool_records": 930,
+   "rejected_all_zero": 42,
+   "rejected_low_confidence": 63,
+   "rejected_single_pool": 536,
+   "rejected_truncated": 90,
+   "passed_filter": 199,
+   "assigned_to_registry_family": 196,
+   "unmatched_family": 3,
+   "duplicate_of_existing": 159,
+   "added": 37,
+   "filters": {
+    "min_confidence": 85,
+    "min_source_pools": 2,
+    "min_byte_count": 8
+   }
+  },
+  "mirror_pct": 99.96
  },
  "byte_templates": {
   "MQB_MK100": {
@@ -33451,15 +35395,15 @@
    ],
    "default_length": 47,
    "max_length": 48,
-   "observation_count": 156,
+   "observation_count": 172,
    "observed_lengths": {
-    "47": 43,
+    "47": 45,
     "48": 31,
     "31": 16,
-    "30": 64,
-    "29": 2
+    "30": 77,
+    "29": 3
    },
-   "evidence": "vagcode.info address-03: 156 tam kodlamalı gerçek araç",
+   "evidence": "172 tam kodlamali gercek arac; ayna dogrulamasi %99.93",
    "byte_template": [
     {
      "index": 0,
@@ -35075,7 +37019,7 @@
    "observed_lengths": {
     "35": 5
    },
-   "evidence": "vagcode.info address-03: 5 tam kodlamalı gerçek araç",
+   "evidence": "5 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -35405,7 +37349,7 @@
    "observed_lengths": {
     "44": 1
    },
-   "evidence": "vagcode.info address-03: 1 tam kodlamalı gerçek araç",
+   "evidence": "1 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -35818,7 +37762,7 @@
    "observed_lengths": {
     "47": 4
    },
-   "evidence": "vagcode.info address-03: 4 tam kodlamalı gerçek araç",
+   "evidence": "4 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -36250,13 +38194,13 @@
    ],
    "default_length": 20,
    "max_length": 20,
-   "observation_count": 107,
+   "observation_count": 128,
    "observed_lengths": {
-    "20": 43,
-    "19": 44,
-    "18": 20
+    "20": 45,
+    "19": 61,
+    "18": 22
    },
-   "evidence": "vagcode.info address-03: 107 tam kodlamalı gerçek araç",
+   "evidence": "128 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -36842,7 +38786,7 @@
    "observed_lengths": {
     "15": 2
    },
-   "evidence": "vagcode.info address-03: 2 tam kodlamalı gerçek araç",
+   "evidence": "2 tam kodlamali gercek arac; ayna dogrulamasi %None",
    "byte_template": [
     {
      "index": 0,
@@ -37004,7 +38948,7 @@
    "observed_lengths": {
     "31": 10
    },
-   "evidence": "vagcode.info address-03: 10 tam kodlamalı gerçek araç",
+   "evidence": "10 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -37297,7 +39241,7 @@
    "observed_lengths": {
     "53": 6
    },
-   "evidence": "vagcode.info address-03: 6 tam kodlamalı gerçek araç",
+   "evidence": "6 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -38183,7 +40127,7 @@
    "observed_lengths": {
     "59": 3
    },
-   "evidence": "vagcode.info address-03: 3 tam kodlamalı gerçek araç",
+   "evidence": "3 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -38726,7 +40670,7 @@
    "observed_lengths": {
     "24": 3
    },
-   "evidence": "vagcode.info address-03: 3 tam kodlamalı gerçek araç",
+   "evidence": "3 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -38961,7 +40905,7 @@
    "observed_lengths": {
     "10": 14
    },
-   "evidence": "vagcode.info address-03: 14 tam kodlamalı gerçek araç",
+   "evidence": "14 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -39072,7 +41016,7 @@
     "4": 7,
     "3": 7
    },
-   "evidence": "vagcode.info address-03: 14 tam kodlamalı gerçek araç",
+   "evidence": "14 tam kodlamali gercek arac; ayna dogrulamasi %None",
    "byte_template": [
     {
      "index": 0,
@@ -39126,7 +41070,7 @@
    "observed_lengths": {
     "26": 1
    },
-   "evidence": "vagcode.info address-03: 1 tam kodlamalı gerçek araç",
+   "evidence": "1 tam kodlamali gercek arac; ayna dogrulamasi %100.0",
    "byte_template": [
     {
      "index": 0,
@@ -46760,5 +48704,43 @@
    }
   },
   "additions_total": 25
- }
+ },
+ "source_registry": [
+  {
+   "id": "vagcode_info",
+   "label": "vagcode.info - Address 03 (ABS)",
+   "url": "https://vagcode.info/en/components/address-03",
+   "kind": "web"
+  },
+  {
+   "id": "ross_tech_somnus",
+   "label": "Ross-Tech forum konu 17417 (Somnus) - MK100 byte anlamlari",
+   "url": "https://forums.ross-tech.com/index.php?threads/17417/",
+   "kind": "forum"
+  },
+  {
+   "id": "ross_tech_forum",
+   "label": "Ross-Tech forum - Address 03 kodlama tartismalari",
+   "url": "https://forums.ross-tech.com",
+   "kind": "forum"
+  },
+  {
+   "id": "tdiclub",
+   "label": "TDI Club forum - ABS/ESP kodlama",
+   "url": "https://forums.tdiclub.com",
+   "kind": "forum"
+  },
+  {
+   "id": "mqb_retrofits",
+   "label": "MQB Retrofits - ABS coding referansi",
+   "url": "https://mqb-retrofits.com/abs-coding",
+   "kind": "docs"
+  },
+  {
+   "id": "reference_tables",
+   "label": "Referans byte anlam tablolari (Ross-Tech paylasimi)",
+   "url": "https://docs.google.com/spreadsheets/d/1V-OKyWGNWASIKmDf_YrTnT22BEh8ocQ1V1qpXOTBX84",
+   "kind": "docs"
+  }
+ ]
 }

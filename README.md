@@ -14,7 +14,7 @@ Runs on Windows, macOS and Linux. Fully offline — no internet connection requi
 
 ## Highlights
 
-- **13 module families**, validated against 326 real vehicle codes.
+- **13 module families**, validated against 363 real vehicle codes.
 - Mirror rules verified per family against real vehicles — **99.95 %** overall consistency.
 - Byte lengths, mirror maps, VIN offsets and byte roles are **derived from observed data**,
   not hard-coded guesses.
@@ -136,9 +136,27 @@ program; the rule itself is not altered to accommodate one faulty source record.
 
 ## Data sources
 
-- **326 verified vehicle records** — address 03, [vagcode.info](https://vagcode.info/en/components/address-03)
-- **Byte meanings** — the MK100 ABS Coding spreadsheet shared by user *Somnus* in
-  [Ross-Tech forum thread 17417](https://forums.ross-tech.com/index.php?threads/17417/)
+All 363 vehicle records are real scans from the sources below. Every byte meaning is
+labelled with where it came from, and the program shows that label in the Decode tab.
+
+| Source | Contribution |
+|---|---|
+| [vagcode.info — Address 03](https://vagcode.info/en/components/address-03) | 326 verified vehicle records |
+| [Ross-Tech thread 17417](https://forums.ross-tech.com/index.php?threads/17417/) (*Somnus*) | MK100 byte meanings |
+| [Ross-Tech forums](https://forums.ross-tech.com) | 5 coding records |
+| [TDI Club forums](https://forums.tdiclub.com) | 5 coding records |
+| [MQB Retrofits](https://mqb-retrofits.com/abs-coding) | coding reference |
+
+Records were kept only when they passed all of these checks:
+
+- the coding is complete (no truncated blocks)
+- confidence ≥ 85
+- confirmed in at least two independent source pools
+- matched to a known module family by part series **and** byte length
+
+A candidate pool of 930 observations was reduced to 199 qualifying records; 196 matched a
+known family, 3 were unmatched and dropped, and 37 were new unique codings on top of the
+original 326. The full accounting is in `statistics.filter_accounting` of the dataset file.
 
 ## Documentation
 

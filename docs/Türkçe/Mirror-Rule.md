@@ -1,6 +1,7 @@
 # Ayna kuralı
 
-[English](Mirror-Rule.md)
+[English](../Mirror-Rule.md) · [Türkçe](Mirror-Rule.md)
+
 
 ## Nedir
 

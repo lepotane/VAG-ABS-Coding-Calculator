@@ -1,6 +1,7 @@
 # Decoding a coding
 
-[Türkçe](Türkçe/Decoding.md)
+[English](Decoding.md) · [Türkçe](Türkçe/Decoding.md)
+
 
 The Decode tab turns a raw long coding into a byte-by-byte explanation and checks
 whether the block is internally consistent.

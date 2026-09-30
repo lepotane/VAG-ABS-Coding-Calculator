@@ -1,6 +1,7 @@
 # Modül aileleri
 
-[English](Families.md)
+[English](../Families.md) · [Türkçe](Families.md)
+
 
 ## Bayt uzunluğu araca göre değil, parça numarasına göre belirlenir
 

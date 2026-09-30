@@ -1,6 +1,7 @@
 # The mirror rule
 
-[Türkçe](Türkçe/Mirror-Rule.md)
+[English](Mirror-Rule.md) · [Türkçe](Türkçe/Mirror-Rule.md)
+
 
 ## What it is
 

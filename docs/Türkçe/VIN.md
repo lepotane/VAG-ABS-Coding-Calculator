@@ -1,6 +1,7 @@
 # VIN çözümleme
 
-[English](VIN.md)
+[English](../VIN.md) · [Türkçe](VIN.md)
+
 
 ## Yapı
 

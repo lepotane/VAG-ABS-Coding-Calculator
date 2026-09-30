@@ -1,6 +1,7 @@
 # Installation
 
-[Türkçe](Türkçe/Installation.md)
+[English](Installation.md) · [Türkçe](Türkçe/Installation.md)
+
 
 ## Windows
 

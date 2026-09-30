@@ -1,6 +1,7 @@
 # Kod üretme
 
-[English](Generating.md)
+[English](../Generating.md) · [Türkçe](Generating.md)
+
 
 Üret sekmesi arac hakkında bildiklerinizden uzun kodlama oluşturur.
 

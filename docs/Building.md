@@ -1,6 +1,7 @@
 # Building from source
 
-[Türkçe](Türkçe/Building.md)
+[English](Building.md) · [Türkçe](Türkçe/Building.md)
+
 
 ## Requirements
 

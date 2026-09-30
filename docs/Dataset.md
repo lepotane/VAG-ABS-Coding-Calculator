@@ -1,6 +1,7 @@
 # Extending the dataset
 
-[Türkçe](Türkçe/Dataset.md)
+[English](Dataset.md) · [Türkçe](Türkçe/Dataset.md)
+
 
 The dataset is the program's source of truth. Adding or correcting a module family
 means editing `src/data/mk100_dataset.json` — not the source code.

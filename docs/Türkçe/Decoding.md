@@ -1,6 +1,7 @@
 # Kod çözümleme
 
-[English](Decoding.md)
+[English](../Decoding.md) · [Türkçe](Decoding.md)
+
 
 Çözümleme sekmesi ham uzun kodlamayı bayt bayt açıklamaya çevirir ve bloğun
 kendisiyle tutarlı olup olmadığını kontrol eder.

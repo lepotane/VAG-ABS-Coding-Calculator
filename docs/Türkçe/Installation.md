@@ -1,6 +1,7 @@
 # Kurulum
 
-[English](Installation.md)
+[English](../Installation.md) · [Türkçe](Installation.md)
+
 
 ## Windows
 

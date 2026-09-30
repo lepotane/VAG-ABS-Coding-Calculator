@@ -1,6 +1,7 @@
 # Generating a coding
 
-[Türkçe](Türkçe/Generating.md)
+[English](Generating.md) · [Türkçe](Türkçe/Generating.md)
+
 
 The Generate tab builds a long coding from what you know about the vehicle.
 

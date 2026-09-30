@@ -1,6 +1,7 @@
 # Veri setini genişletme
 
-[English](Dataset.md)
+[English](../Dataset.md) · [Türkçe](Dataset.md)
+
 
 Veri seti programın temel kaynağıdır. Bir modül ailesi eklemek veya düzeltmek
 `src/data/mk100_dataset.json` dosyasını düzenlemektir — kaynak kod değil.

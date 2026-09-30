@@ -1,10 +1,10 @@
 # VAG ABS Coding Calculator — Wiki
 
-[English](Home.md) · [Türkçe](Türkçe.md)
+[English](Home.md) · [Türkçe](Home.tr.md)
 
 ## İçindekiler
 
-1. [Ana sayfa](Türkçe.md) — genel bakış
+1. [Ana sayfa](Home.md) — genel bakış
 2. [Kurulum](Türkçe/Installation.md) — Windows, macOS, Linux
 3. [Kod çözümleme](Türkçe/Decoding.md)
 4. [Kod üretme](Türkçe/Generating.md)

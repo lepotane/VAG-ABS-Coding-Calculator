@@ -1,6 +1,7 @@
 # Kaynaktan derleme
 
-[English](Building.md)
+[English](../Building.md) · [Türkçe](Building.md)
+
 
 ## Gereksinimler
 

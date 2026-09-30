@@ -1,0 +1,48 @@
+appId: org.vag.abscoder
+productName: VAG ABS Coder
+copyright: Copyright © 2026 Samet Muric
+icon: build/icon.png
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - electron/**/*
+  - src/data/mk100_dataset.json
+asar: true
+asarUnpack:
+  - src/data/*.json
+win:
+  # Gelistirici Modu kapali oldugu icin winCodeSign araci (rcedit) sembolik
+  # bag ile acilamiyor. Bu yuzden meta veri duzenlemesi kapatilir ve
+  # dosya sonradan scripts/make-cert.ps1 -Sign ile imzalanir.
+  signAndEditExecutable: false
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+nsis:
+  artifactName: VAG-ABSCoder-Setup-${version}.${ext}
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: VAG ABS Coder
+  installerLanguages: [tr, en]
+  language: "1033"
+portable:
+  artifactName: VAG-ABSCoder-Portable-${version}.${ext}
+mac:
+  target:
+    - target: dmg
+      arch: [x64, arm64]
+  category: public.app-category.utilities
+  artifactName: VAG-ABSCoder-${version}-${arch}.${ext}
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Utility
+  artifactName: VAG-ABSCoder-${version}-${arch}.${ext}

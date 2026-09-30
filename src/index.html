@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MK100 ABS Coding Calculator</title>
+  <link rel="stylesheet" href="./ui/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ozel baslik cubugu (masaustu program gorunumu) -->
+  <div id="titlebar">
+    <div class="drag"><span id="tbTitle"></span></div>
+    <div class="wbtns">
+      <button id="btnMin" class="wb" title="Minimize" aria-label="Minimize">
+        <svg viewBox="0 0 10 10"><path d="M0 5h10v1H0z"/></svg>
+      </button>
+      <button id="btnMax" class="wb" title="Maximize" aria-label="Maximize">
+        <svg viewBox="0 0 10 10"><path d="M0 0h10v10H0zm1 1v8h8V1z"/></svg>
+      </button>
+      <button id="btnClose" class="wb wb-close" title="Close" aria-label="Close">
+        <svg viewBox="0 0 10 10"><path d="M0 0h2l3 3.2L8 0h2L5.6 5.2 10 10H8L5 6.6 2 10H0l4.4-4.8z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <header>
+    <div>
+      <h1 id="title">MK100 ABS Kodlama Hesaplayıcı</h1>
+      <p class="sub" id="tagline"></p>
+    </div>
+    <div class="grow"></div>
+    <button class="lang-btn on" data-lang="tr">TR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </header>
+
+  <div class="tabs">
+    <button data-tab="decode" class="on"></button>
+    <button data-tab="encode"></button>
+    <button data-tab="vin"></button>
+    <button data-tab="learn"></button>
+  </div>
+
+  <!-- ============================================ ÇÖZÜMLE -->
+  <div class="panel on" id="p-decode">
+    <div class="card">
+      <div class="row">
+        <div class="field grow">
+          <label id="l-family"></label>
+          <select id="family"></select>
+          <div class="hint" id="h-family"></div>
+        </div>
+        <div class="field">
+          <label id="l-length"></label>
+          <select id="length"></select>
+        </div>
+      </div>
+      <div id="profileNote" class="profile-note" hidden></div>
+      <div class="row" style="margin-top:14px">
+        <div class="field grow">
+          <label id="l-code"></label>
+          <textarea id="code" class="mono" spellcheck="false"></textarea>
+        </div>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <button class="btn primary" id="decodeBtn"></button>
+        <button class="btn" id="clearBtn"></button>
+      </div>
+    </div>
+    <div id="out"></div>
+  </div>
+
+  <!-- ============================================ ÜRET -->
+  <div class="panel" id="p-encode">
+    <div class="card">
+      <h2 id="h-encVehicle"></h2>
+      <div class="row" id="encForm"></div>
+    </div>
+    <div class="card">
+      <h2 id="h-encVin2"></h2>
+      <div class="row">
+        <div class="field grow">
+          <label for="encVin"><span id="l-vinBadge" class="opt-badge"></span></label>
+          <input type="text" id="encVin" class="mono" maxlength="17" spellcheck="false">
+          <div class="hint" id="h-encVin"></div>
+          <div id="vinInline"></div>
+        </div>
+        <div class="field grow">
+          <label id="l-encTail"></label>
+          <select id="encTail"></select>
+          <div class="hint" id="h-encTail"></div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <div class="field grow">
+          <label id="l-encDonor"><span id="donorBadge" class="opt-badge"></span></label>
+          <textarea id="encDonor" class="mono" spellcheck="false"></textarea>
+          <div class="hint" id="h-encDonor"></div>
+          <select id="donorPick" class="mini-select"></select>
+          <div class="hint" id="h-donorPick"></div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <button class="btn primary" id="genBtn"></button>
+      </div>
+    </div>
+    <div id="genOut"></div>
+  </div>
+
+  <!-- ============================================ VIN -->
+  <div class="panel" id="p-vin">
+    <div class="card">
+      <h2 id="h-vinTitle"></h2>
+      <div class="row">
+        <div class="field grow">
+          <label for="vinInput">VIN</label>
+          <input type="text" id="vinInput" class="mono" maxlength="17" spellcheck="false">
+          <div class="hint" id="h-vinHint"></div>
+        </div>
+        <button class="btn primary" id="vinBtn" style="margin-bottom:22px"></button>
+      </div>
+      <div id="vinOut"></div>
+    </div>
+  </div>
+
+  <!-- ============================================ VERİ SETİ -->
+  <div class="panel" id="p-learn">
+    <div id="learnOut"></div>
+  </div>
+
+  <div class="foot">
+    <div id="footerNote"></div>
+  </div>
+  <div class="author" id="authorNote"></div>
+
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

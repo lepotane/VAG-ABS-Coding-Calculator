@@ -120,9 +120,9 @@ describe("motor profilleri", () => {
     expect(compact.bytes[8]).not.toBeUndefined();
   });
 
-  it("COMPACT_1K0 VIN baytlari 1-3-5-7-9-11-13", () => {
-    // "B8 = VIN 15, B10 = VIN 16" iddiasi ampirik veriyle CUSUSMUYOR:
-    // B8 ve B10 ayna baytidir (B0 ve B2'nin bitrevi).
+it("COMPACT_1K0 VIN baytlari 1-3-5-7-9-11-13", () => {
+    // 107 gercek aracla dogrulandi. B8 ve B10 ayna baytidir
+    // (B0 ve B2'nin bitrevi), bu yuzden VIN bayti olamazlar.
     const tpl = ds.template("COMPACT_1K0").byte_template;
     const vin = tpl.filter((b) => b.kind === "vin").map((b) => b.index).sort((a, b) => a - b);
     expect(vin).toEqual([1, 3, 5, 7, 9, 11, 13]);

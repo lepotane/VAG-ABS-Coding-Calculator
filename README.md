@@ -134,12 +134,18 @@ Known exception: one Skoda Karoq record (`5Q0 614 517 DN`, HW H82 / SW 0113) con
 `byte2=6A → byte16=58` where `56` is expected. The deviation is kept as a note in the
 program; the rule itself is not altered to accommodate one faulty source record.
 
+## Data sources
+
+- **326 verified vehicle records** — address 03, [vagcode.info](https://vagcode.info/en/components/address-03)
+- **Byte meanings** — the MK100 ABS Coding spreadsheet shared by user *Somnus* in
+  [Ross-Tech forum thread 17417](https://forums.ross-tech.com/index.php?threads/17417/)
+
 ## Documentation
 
 Full documentation is available in the wiki:
 
 - [English Wiki](https://github.com/lepotane/VAG-ABS-Coding-Calculator/wiki)
-- [Türkçe Wiki](https://github.com/lepotane/VAG-ABS-Coding-Calculator/wiki/Türkçe)
+- [Türkçe Wiki](https://github.com/lepotane/VAG-ABS-Coding-Calculator/wiki/TR-Home)
 
 ## Contributing
 

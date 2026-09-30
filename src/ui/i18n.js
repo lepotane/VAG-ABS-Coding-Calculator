@@ -1,7 +1,7 @@
 /**
  * Cok dilli sozluK.
  * Kural: arayuz metinleri (etiket, dugme, ipucu) TAMAMEN dile gore degisir.
- * Veri kaynakli anlamlar (referans/vagcode metinleri) orijinal dilinde kalir;
+ * Veri kaynakli anlamlar orijinal dilinde kalir;
  * bunlar icin "source" rozeti gosterilir.
  */
 
@@ -25,7 +25,7 @@ export const STR = {
     copy: "Kopyala",
     copied: "Kopyalandı",
     source: "Kaynak metin",
-    sourceNote: "Bu anlam kaynaktan (referans / forum) birebir gelir; çeviri yoktur.",
+    sourceNote: "Bu anlam kaynaktan birebir gelir; çeviri yoktur.",
 
     byte: "Bayt",
     hex: "Hex",
@@ -79,7 +79,7 @@ export const STR = {
     learnVersion: "Veri sürümü",
     learnFamilies: "Aile",
     learnObs: "Gerçek araç kaydı",
-    learnAdditions: "referans dışında eklenen",
+    learnAdditions: "kaynak tablosu dışında eklenen",
     learnAccuracy: "Ortalama isabet",
     learnMirrorRule: "Ayna kuralı doğrulaması",
     learnTable: "Bayt doğrulama tablosu",
@@ -219,7 +219,7 @@ export const STR = {
     copy: "Copy",
     copied: "Copied",
     source: "Source text",
-    sourceNote: "This meaning comes verbatim from the source (referans / forum); it is not translated.",
+    sourceNote: "This meaning comes verbatim from the source; it is not translated.",
 
     byte: "Byte",
     hex: "Hex",
@@ -273,7 +273,7 @@ export const STR = {
     learnVersion: "Dataset version",
     learnFamilies: "Families",
     learnObs: "Real vehicle records",
-    learnAdditions: "Added beyond referans",
+    learnAdditions: "Added beyond the source table",
     learnAccuracy: "Average accuracy",
     learnMirrorRule: "Mirror rule verification",
     learnTable: "Byte verification table",
@@ -509,8 +509,8 @@ export const MIRROR_NOTES = {
       "Kaynak koddan doğrulandı (bit çevirme), gerçek araç gözlemi yok",
     "kaynak koddan (mirroredByte0/2), gercek arac gozlemi yok":
       "Kaynak koddan doğrulandı, gerçek araç gözlemi yok",
-    "referans metnine gore; gercek kodlama vagcode.info'da YOK":
-      "referans metnine göre; gerçek kodlama kaynağında yok",
+    "kaynak metnine gore; gercek arac kodlamasinda YOK":
+      "kaynak metnine göre; gerçek araç kodlamasında yok",
   },
   en: {
     "727/728 gercek kodlama ile dogrulandi":
@@ -529,8 +529,8 @@ export const MIRROR_NOTES = {
       "verified from source code (bit-reversal), no real-vehicle data",
     "kaynak koddan (mirroredByte0/2), gercek arac gozlemi yok":
       "verified from source code, no real-vehicle data",
-    "referans metnine gore; gercek kodlama vagcode.info'da YOK":
-      "per referans text; no real coding in the source data",
+    "kaynak metnine gore; gercek arac kodlamasinda YOK":
+      "per source text; not present in real vehicle codings",
   },
 };
 

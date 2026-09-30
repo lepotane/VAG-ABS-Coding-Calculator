@@ -133,12 +133,18 @@ Bilinen istisna: bir Skoda Karoq kaydında (`5Q0 614 517 DN`, HW H82 / SW 0113)
 `byte2=6A → byte16=58` yazıyor, beklenen `56`. Sapma programda not olarak saklanır;
 kural tek bir hatalı kaynak kaydına uydurmak için değiştirilmez.
 
+## Veri kaynakları
+
+- **326 doğrulanmış araç kaydı** — adres 03, [vagcode.info](https://vagcode.info/en/components/address-03)
+- **Bayt anlamları** — *Somnus* kullanıcısının [Ross-Tech forum konu 17417](https://forums.ross-tech.com/index.php?threads/17417/)
+  paylaşımındaki MK100 ABS Coding tablosu
+
 ## Belgeler
 
 Ayrıntılı belgeler wiki'de:
 
 - [English Wiki](https://github.com/lepotane/VAG-ABS-Coding-Calculator/wiki)
-- [Türkçe Wiki](https://github.com/lepotane/VAG-ABS-Coding-Calculator/wiki/Türkçe)
+- [Türkçe Wiki](https://github.com/lepotane/VAG-ABS-Coding-Calculator/wiki/TR-Home)
 
 ## Katkı
 

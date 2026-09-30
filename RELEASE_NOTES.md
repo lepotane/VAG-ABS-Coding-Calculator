@@ -5,7 +5,7 @@ Windows, macOS and Linux. Fully offline.
 
 ## In this release
 
-This release expands the verified dataset and cleans up how sources are recorded.
+This release expands the verified dataset and makes source attribution explicit.
 
 - **363 real vehicle records**, up from 326 — 13 module families, unchanged
 - Mirror rules verified per family against real vehicles — **99.96 %** overall consistency

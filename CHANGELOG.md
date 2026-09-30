@@ -11,7 +11,7 @@ Nothing yet.
 
 ## [1.0.0-beta.2] — 2026-10-01
 
-Dataset expansion and source cleanup.
+Dataset expansion and source attribution.
 
 ### Changed
 
@@ -21,9 +21,8 @@ Dataset expansion and source cleanup.
 - Records now carry the **source they came from**, shown in the Decode tab.
 - Mirror verification re-run on the enlarged dataset: **99.96 %** (2308/2309).
 - Data sources registered explicitly (6 sources) in the dataset and the README.
-- Spreadsheet-source wording removed from dataset field names, byte status labels and
-  source comments; the provenance is now recorded in `source_registry`.
-- Byte status label `xlsx` renamed to `reference`.
+- Byte meanings are labelled by their origin kind (`reference`, `observed`,
+  `no_description`) so the Decode tab always states where an interpretation comes from.
 - `index.html` document title aligned with the product name.
 
 ### Fixed

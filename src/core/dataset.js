@@ -10,6 +10,32 @@ export const DATASET_VERSION = "2.0.0";
 /** Minimum desteklenen sema surumu. */
 export const MIN_SCHEMA = "1.0.0";
 
+/**
+ * Uretim guvenligi esikleri.
+ *
+ * Bir baytin "en sik degeri" ancak yeterli gozlemde ve yeterli payla
+ * onaylandiginda guvenilirdir. Aksi halde deger sadece en sik olan -- bu
+ * aracinin dogru degeri oldugu anlamina gelmez.
+ */
+export const MIN_SAMPLES = 3;   // bu kadar gozlemden az varsa karar verilmez
+export const MIN_SHARE = 0.6;    // en sik deger bu payi tutmali
+
+function hasAnyKey(f) {
+  return !!(f && Object.values(f).some((v) => v != null && v !== ""));
+}
+
+/** Gozlemleri donanim/yazilim/part serisine gore daraltir. */
+export function filterObservations(obs, filter = {}) {
+  const { hw, sw, partSeries } = filter || {};
+  if (!hasAnyKey({ hw, sw, partSeries })) return obs;
+  return obs.filter((o) => {
+    if (hw && o.hardware !== hw) return false;
+    if (sw && o.software !== sw) return false;
+    if (partSeries && o.part_series !== partSeries) return false;
+    return true;
+  });
+}
+
 function cmpVer(a, b) {
   const pa = String(a).split(".").map(Number);
   const pb = String(b).split(".").map(Number);
@@ -48,16 +74,28 @@ export class Dataset {
    * Bayt istatistigi: her bayt icin en sik deger ve gecerli gozlem sayisi.
    * Uretimde bilinmeyen baytlari doldurmak icin kullanilir; boylece
    * kullaniciya donor kodu vermek zorunda kalmaz.
+   *
+   * @param {string} familyId
+   * @param {number} length
+   * @param {{hw?:string, sw?:string, partSeries?:string}} [filter]
+   *   Donanim/yazilim filtresi. Ayni aile icinde 12 farkli donanim surumu
+   *   olabilir ve "en sik deger" farkli araclardan gelir. HW/SW verildiginde
+   *   istatistik yalnizca o surumdeki gozlemlerden hesaplanir.
    * @returns {Object<number,{top:string,topCount:number,count:number,total:number,distinct:number}>}
    */
-  byteStats(familyId, length) {
-    const obs = this.observationsFor(familyId);
-    if (!obs.length) return {};
+  byteStats(familyId, length, filter = {}) {
+    const all = this.observationsFor(familyId);
+    const obs = filterObservations(all, filter);
+    // Filtre verildi ama hic eslesme yoksa aile geneline duser. SESSIZCE
+    // yanlis deger uretmektense bos kalmasi daha guvenlidir; uretici
+    // `matched` sayisini kontrol eder.
+    const scoped = obs.length ? obs : filter && hasAnyKey(filter) ? [] : all;
+    if (!scoped.length) return {};
     const out = {};
     for (let i = 0; i < length; i++) {
       const freq = new Map();
       let total = 0;
-      for (const o of obs) {
+      for (const o of scoped) {
         if (i >= o.bytes.length) continue;
         const v = String(o.bytes[i]).toUpperCase();
         freq.set(v, (freq.get(v) || 0) + 1);
@@ -79,6 +117,9 @@ export class Dataset {
         if (c > realTopCount) { realTop = v; realTopCount = c; }
       }
       const onlyZero = realTotal === 0;
+      // Guven: en sik degerin gecerli gozlemler icindeki payi.
+      // Dusuk pay = bu deger bu ailede "tipik" degil, sadece en sik olan.
+      const share = realTotal ? realTopCount / realTotal : 0;
       out[i] = {
         top,
         topCount,
@@ -94,9 +135,45 @@ export class Dataset {
         realDistinct: realFreq.size,
         realConstant: !onlyZero && realFreq.size === 1,
         zeroCount,
+        // kapsam ve guven
+        matched: scoped.length,
+        scopeTotal: all.length,
+        filtered: !!(obs.length && obs.length !== all.length),
+        share,
+        // en sik deger tek basina bile cogunluk degilse guvenilmez sayilir
+        reliable: realTotal >= MIN_SAMPLES && share >= MIN_SHARE,
+        conflicts: realFreq.size,
       };
     }
     return out;
+  }
+
+  /**
+   * Bir ailede bilinen donanim/yazilim surumleri.
+   * Uretim arayuzunde HW/SW alanlarini doldurmak icin.
+   */
+  hardwareVersions(familyId) {
+    const obs = this.observationsFor(familyId);
+    const hw = new Map();
+    for (const o of obs) {
+      const h = o.hardware || null;
+      if (!h) continue;
+      if (!hw.has(h)) hw.set(h, { hw: h, count: 0, sw: new Map(), partSeries: new Set() });
+      const e = hw.get(h);
+      e.count++;
+      if (o.software) e.sw.set(o.software, (e.sw.get(o.software) || 0) + 1);
+      if (o.part_series) e.partSeries.add(o.part_series);
+    }
+    return [...hw.values()]
+      .map((e) => ({
+        hw: e.hw,
+        count: e.count,
+        partSeries: [...e.partSeries],
+        sw: [...e.sw.entries()]
+          .sort((a, b) => b[1] - a[1])
+          .map(([sw, n]) => ({ sw, count: n })),
+      }))
+      .sort((a, b) => b.count - a.count);
   }
 
   /**

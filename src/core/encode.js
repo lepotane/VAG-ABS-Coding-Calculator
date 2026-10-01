@@ -7,7 +7,7 @@
  */
 
 import { bitrev } from "./bits.js";
-import { formatCode } from "./dataset.js";
+import { formatCode, filterObservations, MIN_SAMPLES, MIN_SHARE } from "./dataset.js";
 import { getProfile } from "./profiles.js";
 
 /**
@@ -44,6 +44,9 @@ export function encode(ds, spec) {
   const bytes = new Array(targetLen).fill(null);
   const applied = [];
   const unresolved = [];
+  // uretim guvenligi: her baytin nereden gelip ne kadar guvenilir oldugu
+  const safeBytes = [];
+  const uncertainBytes = [];
 
   // --- 1) veri baytlari (secimlerden)
   for (const [k, v] of Object.entries(spec.selections || {})) {
@@ -80,8 +83,20 @@ export function encode(ds, spec) {
     }
   }
 
-  // Gozlem istatistigi: her bayt icin en sik deger + kac gecerli gozlem
-  const stats = ds.byteStats(familyId, targetLen);
+  // Gozlem istatistigi: her bayt icin en sik deger + kac gecerli gozlem.
+  // HW/SW verildiyse istatistik yalnizca o surumden hesaplanir; aile geneli
+  // "en sik deger" farkli donanimdan gelir ve araca uymaz.
+  const scope = {
+    hw: spec.hw || null,
+    sw: spec.sw || null,
+    partSeries: spec.partSeries || spec.part_series || null,
+  };
+  const hasScope = !!(scope.hw || scope.sw || scope.partSeries);
+  const stats = ds.byteStats(familyId, targetLen, scope);
+  const scopedObs = hasScope
+    ? filterObservations(ds.observationsFor(familyId), scope)
+    : ds.observationsFor(familyId);
+
   for (let i = 0; i < targetLen; i++) {
     if (bytes[i] !== null || vinIdx.has(i)) continue;
     const s = stats[i];
@@ -93,10 +108,21 @@ export function encode(ds, spec) {
         meaning: null,
       });
       unresolved.push({ byte: i, from: "constant", value: s.top });
+      safeBytes.push({ byte: i, value: s.top, reason: "constant", observed: s.total });
     } else {
       bytes[i] = parseInt(s.top, 16);
-      unresolved.push({ byte: i, from: "most_common", value: s.top,
-                        share: Math.round((100 * s.count) / s.total) });
+      const share = Math.round(100 * s.count / s.total);
+      unresolved.push({ byte: i, from: "most_common", value: s.top, share,
+                        observed: s.count, of: s.total });
+      // Guven degerlendirmesi: yeterli gozlem + yeterli pay mi?
+      const reliable = s.reliable;
+      safeBytes.push({
+        byte: i, value: s.top, share,
+        observed: s.count, of: s.total, conflicts: s.conflicts,
+        reliable,
+        reason: reliable ? "data" : "unverified",
+      });
+      if (!reliable) uncertainBytes.push({ byte: i, value: s.top, share, observed: s.count, of: s.total });
     }
   }
 
@@ -179,8 +205,66 @@ export function encode(ds, spec) {
   if (gaps.length)
     warnings.push({ code: "unresolvedBytes", n: gaps.length, bytes: gaps });
 
+  // --- uretim guvenligi
+  // Kod yazilabilir olmasi icin her baytin ya secilmis, ya da veriden
+  // guvenilir sekilde turetilmis olmasi gerekir. "En sik deger" tek basina
+  // yeterli kanit degilse kod uretilir ama YAZILABILIR sayilmaz.
+  const scopeMatched = scopedObs.length;
+  const scopeTotal = ds.observationsFor(familyId).length;
+  const lowSample = hasScope && scopeMatched < MIN_SAMPLES;
+  if (hasScope && !scopeMatched)
+    warnings.push({
+      code: "noScopedObservations",
+      hw: scope.hw, sw: scope.sw,
+    });
+  else if (lowSample)
+    warnings.push({
+      code: "thinScopedSample",
+      n: scopeMatched, hw: scope.hw, sw: scope.sw,
+    });
+  if (uncertainBytes.length)
+    warnings.push({
+      code: "unverifiedBytes",
+      n: uncertainBytes.length,
+      bytes: uncertainBytes,
+    });
+
+  // Ayna baytlari kaynaktan turer; kaynak guvenilir degilse ayna bayti da
+  // guvenilmez sayilir (kod yine uretilir ama isaretlenir).
+  const unverifiedSet = new Set(uncertainBytes.map((u) => u.byte));
+  for (const [s, d] of Object.entries(mirrorMap)) {
+    const si = Number(s);
+    if (!unverifiedSet.has(si)) continue;
+    const di = Number(d);
+    if (unverifiedSet.has(di)) continue;
+    unverifiedSet.add(di);
+    uncertainBytes.push({ byte: di, value: final[di], mirrorOf: si });
+  }
+
+  const blocking = [];
+  if (uncertainBytes.length) blocking.push("unverifiedBytes");
+  if (gaps.length) blocking.push("unresolvedBytes");
+  if (hasScope && !scopeMatched) blocking.push("noScopedObservations");
+  if (hasScope && lowSample) blocking.push("thinScopedSample");
+  const writable = blocking.length === 0;
+
   return {
     ok: errors.length === 0,
+    // uretilen kod teknik olarak gecerli; yazilabilir mi ayrica belirtilir
+    writable,
+    blocking,
+    safety: {
+      scope: hasScope ? scope : null,
+      scopeMatched,
+      scopeTotal,
+      filtered: hasScope && scopeMatched !== scopeTotal,
+      lowSample,
+      minSamples: MIN_SAMPLES,
+      minShare: MIN_SHARE,
+      safe: safeBytes,
+      uncertain: uncertainBytes,
+      confirmed: applied.length,
+    },
     engine: prof.engine,
     errors,
     family: familyId,

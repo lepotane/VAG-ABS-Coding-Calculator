@@ -51,6 +51,26 @@ export const STR = {
       "Aynı donanımdan bir donor kodu alıp kendi VIN'ine göre yeniden üretmelisin.",
 
     encVehicle: "Araç / donanım",
+    genHwCard: "Donanım ve yazılım sürümü",
+    genHw: "Donanım (HW)",
+    genHwHint: "Örn. H62 — kontrol ünitesi kodu",
+    genSw: "Yazılım (SW)",
+    genSwHint: "Örn. 0654",
+    genHwPick: "Ailede bilinen sürümler",
+    genHwPickHint: "Seçtiğiniz sürüm için gözlem verisi daraltılır",
+    genHwAny: "Belirtilmedi — tüm aile",
+    genHwHintNone: "Donanım/yazılım girmezseniz aile genelinde “en sık” değerler kullanılır. Aile birden fazla sürümü kapsıyorsa bu değerler başka araçlara ait olabilir.",
+    genObservations: "gözlem",
+    genObsShort: "gözlem",
+    genScope: "Kapsam",
+    genAgree: "uyum",
+    genMirrorOf: "ayna:",
+    genNoScope: "bu sürüm için gözlem yok",
+    genThinScope: "gözlem sayısı çok az ({n}/{min}) — bu sürüm için güvenilir veri yok",
+    genUncertainBytes: "Doğrulanamayan baytlar",
+    genUnsafeTitle: "KOD YAZILABİLİR DEĞİL",
+    genUnsafeBody: "Kod üretildi ama bu araca ait olduğu doğrulanamadı. Aşağıdaki baytlar başka araçlardan gelen “en sık” değerlerdir; aracınıza ait olmayabilir. Bu kodla araca yazmayın.",
+    genUnsafeFix: "Çözüm: donanım/yazılım sürümünü girin, her baytı listeden seçin veya aracınızın mevcut kodlamasını verici (donor) olarak verin.",
     encVinCard: "VIN ve temel kod",
     encVin: "VIN",
     encVinHint: "7, 8 ve 13-17. karakterler doğrudan koda yazılır.",
@@ -245,6 +265,26 @@ export const STR = {
       "Get a donor coding from identical hardware and regenerate it with your own VIN.",
 
     encVehicle: "Vehicle / equipment",
+    genHwCard: "Hardware and software version",
+    genHw: "Hardware (HW)",
+    genHwHint: "e.g. H62 — control unit code",
+    genSw: "Software (SW)",
+    genSwHint: "e.g. 0654",
+    genHwPick: "Known versions for this family",
+    genHwPickHint: "Choosing a version narrows the observation data",
+    genHwAny: "Not specified — whole family",
+    genHwHintNone: "Without hardware/software the “most common” values across the family are used. If the family covers several versions those values may belong to other vehicles.",
+    genObservations: "observations",
+    genObsShort: "obs",
+    genScope: "Scope",
+    genAgree: "agree",
+    genMirrorOf: "mirror of",
+    genNoScope: "no observations for this version",
+    genThinScope: "very few observations ({n}/{min}) — no reliable data for this version",
+    genUncertainBytes: "Unverified bytes",
+    genUnsafeTitle: "CODE IS NOT WRITABLE",
+    genUnsafeBody: "A code was produced but it could not be verified as belonging to this vehicle. The bytes below are “most common” values taken from other vehicles and may not apply to yours. Do not write this code to the vehicle.",
+    genUnsafeFix: "Fix: enter the hardware/software version, choose every byte from the list, or supply your vehicle’s current coding as a donor.",
     encVinCard: "VIN and base code",
     encVin: "VIN",
     encVinHint: "Chars 7, 8 and 13-17 are written into the code directly.",
@@ -457,7 +497,9 @@ export function makeT(lang) {
     let s = dict[k] ?? STR.tr[k] ?? k;
     if (params) {
       for (const [key, val] of Object.entries(params)) {
+        // Hem %{key} hem {key} yazimini destekle.
         s = s.split("%{" + key + "}").join(val);
+        s = s.split("{" + key + "}").join(val);
       }
     }
     return s;

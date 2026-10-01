@@ -118,6 +118,13 @@ function applyStaticText() {
   set("#decodeBtn", "decode");
   set("#clearBtn", "clear");
   set("#h-encVehicle", "encVehicle");
+  set("#h-encHw", "genHwCard");
+  set("#l-encHw", "genHw");
+  set("#h-encHw", "genHwHint");
+  set("#l-encSw", "genSw");
+  set("#h-encSw", "genSwHint");
+  set("#l-encHwPick", "genHwPick");
+  set("#h-encHwPick", "genHwPickHint");
   set("#h-encVin2", "encVinCard");
   set("#h-encVin", "encVinHint");
   set("#l-encDonor", "encDonor");
@@ -276,6 +283,20 @@ function bind() {
   $("#vinInput").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); runVin(); } });
   $("#encVin").addEventListener("input", () => renderVinInline());
   $("#encTail").addEventListener("change", buildEncodeForm);
+  for (const id of ["#encHw", "#encSw"]) {
+    const el = $(id);
+    if (!el) continue;
+    el.addEventListener("input", () => { updateScopeInfo(); runEncode(); });
+    el.addEventListener("change", () => { updateScopeInfo(); runEncode(); });
+  }
+  const hwPick = $("#encHwPick");
+  if (hwPick)
+    hwPick.addEventListener("change", () => {
+      if (hwPick.value) $("#encHw").value = hwPick.value;
+      updateScopeInfo();
+      runEncode();
+    });
+  updateScopeInfo();
 }
 
 function switchTab(id) {
@@ -431,6 +452,53 @@ function buildEncodeForm() {
 
   buildDonorPicker(fam);
   updateVinHint(fam);
+  buildHwPicker(fam);
+}
+
+/**
+ * Donanim/yazilim secimi.
+ * Aile secildiginde o ailede bilinen HW/SW ciftlerini listeler; secim yapildiginda
+ * gozlem istatistigi o surumle daralir.
+ */
+function buildHwPicker(fam) {
+  const sel = $("#encHwPick");
+  if (!sel || !DS.hardwareVersions) return;
+  const rows = DS.hardwareVersions(fam) || [];
+  sel.innerHTML =
+    `<option value="">${t("genHwAny")}</option>` +
+    rows.map((e) => `<option value="${esc(e.hw)}">HW ${esc(e.hw)} · ${e.count} ${
+      t("genObsShort")} · SW: ${e.sw.slice(0, 4).map((s) => esc(s.sw)).join(", ")}${
+      e.sw.length > 4 ? " …" : ""}</option>`).join("");
+}
+
+/** Secilen HW/SW icin kapsam bilgisini gosterir. */
+function updateScopeInfo() {
+  const box = $("#encScopeInfo");
+  if (!box) return;
+  const fam = $("#family").value;
+  const hw = $("#encHw").value.trim().toUpperCase();
+  const sw = $("#encSw").value.trim().toUpperCase();
+  if (!hw && !sw) {
+    box.textContent = t("genHwHintNone");
+    box.style.color = "var(--fg2)";
+    return;
+  }
+  const all = DS.observationsFor(fam) || [];
+  const m = DS.raw?.statistics ? null : null;
+  const scoped = DS.observationsFor(fam).filter((o) => {
+    if (hw && o.hardware !== hw) return false;
+    if (sw && o.software !== sw) return false;
+    return true;
+  });
+  const parts = [];
+  if (hw) parts.push("HW " + hw);
+  if (sw) parts.push("SW " + sw);
+  parts.push(`${scoped.length}/${all.length} ${t("genObservations")}`);
+  box.textContent = parts.join(" · ");
+  const weak = scoped.length < 3;
+  box.style.color = scoped.length === 0 ? "var(--bad)" : weak ? "var(--warn)" : "var(--ok)";
+  if (scoped.length === 0) box.textContent += "  — " + t("genNoScope");
+  else if (weak) box.textContent += "  — " + t("genThinScope", { n: scoped.length, min: 3 });
 }
 
 /** VIN zorunlu mu, opsiyonel mi? Veriye bakar. */
@@ -545,6 +613,8 @@ function runEncode() {
     vin: $("#encVin").value.trim().toUpperCase(),
     donor: $("#encDonor").value.trim(),
     tail: $("#encTail").value,
+    hw: $("#encHw").value.trim().toUpperCase(),
+    sw: $("#encSw").value.trim().toUpperCase(),
     equipment: {},
   };
   $$("#encForm select").forEach((s) => { if (s.value) spec.selections[s.id.slice(1)] = s.value; });
@@ -557,9 +627,38 @@ function runEncode() {
   }
 
   let h = "";
+  // --- URETIM GUVENLIGI: kod uretilmis olabilir ama YAZILABILIR olmayabilir.
+  // Ayni ailede onlarca donanim surumu olabilir; "en sik deger" farkli
+  // araclardan gelir ve araca uymaz. Bu durumda kod sessizce yanlis olur.
+  if (r.safety && !r.writable) {
+    h += `<div class="notice error"><b>${t("genUnsafeTitle")}</b>${t("genUnsafeBody")}`;
+    if (r.safety.scope) {
+      const s = r.safety.scope;
+      h += `<div class="hint" style="margin-top:6px">${t("genScope")}: ${
+        s.hw ? "HW " + esc(s.hw) : ""}${s.hw && s.sw ? " · " : ""}${s.sw ? "SW " + esc(s.sw) : ""
+      } → ${r.safety.scopeMatched}/${r.safety.scopeTotal} ${t("genObservations")}</div>`;
+    }
+    if (r.blocking.includes("noScopedObservations"))
+      h += `<div class="hint" style="margin-top:6px">${t("genNoScope")}</div>`;
+    else if (r.blocking.includes("thinScopedSample"))
+      h += `<div class="hint" style="margin-top:6px">${t("genThinScope", {
+        n: r.safety.scopeMatched, min: r.safety.minSamples,
+      })}</div>`;
+    if (r.safety.uncertain.length) {
+      h += `<div style="margin-top:8px"><b>${t("genUncertainBytes")}</b><table class="tbl"><tbody>`;
+      for (const u of r.safety.uncertain.slice(0, 24))
+        h += `<tr><td class="c-byte">B${u.byte}</td><td class="c-hex">${esc(u.value)}</td>
+          <td style="color:var(--fg2)">${u.observed}/${u.of} ${t("genAgree")}${
+            u.mirrorOf != null ? ` <span class="hint">(${t("genMirrorOf")} B${u.mirrorOf})</span>` : ""}</td></tr>`;
+      if (r.safety.uncertain.length > 24)
+        h += `<tr><td colspan="3" class="hint">+${r.safety.uncertain.length - 24}</td></tr>`;
+      h += `</tbody></table></div>`;
+    }
+    h += `<div class="hint" style="margin-top:8px">${t("genUnsafeFix")}</div></div>`;
+  }
   if (!r.ok) {
     h += `<div class="notice warn"><b>${t("incomplete")}</b>${encodeMessages(lang, r.errors).map(esc).join("<br>")}</div>`;
-  } else {
+  } else if (r.writable) {
     h += `<div class="notice ok"><b>${t("encMirrorAuto")}</b>${r.mirror.ok}/${r.mirror.total} ${t("mirrorPassed")}</div>`;
   }
 

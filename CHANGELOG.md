@@ -9,6 +9,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Nothing yet.
 
+## [1.0.0-beta.3] — 2026-10-01
+
+Generation is now hardware-aware and refuses to produce a code it cannot verify.
+
+### Fixed
+
+- **Generated codes no longer mix values from other vehicles.** A family can cover a
+  dozen control-unit versions, and the "most common value" across the whole family can
+  belong to a different car. Generation now narrows the observation pool to the hardware
+  and software version you enter.
+- **Generation states whether the code is writable.** A code can still be produced, but
+  when the data cannot support it the program says so and lists the unverified bytes
+  instead of presenting an unsafe coding as final.
+- Byte value tables now include the values actually seen in real vehicles, with the
+  vehicles they were seen on. For example byte 0 = `1E` (Skoda Superb III) occurs on 12
+  vehicles and can now be selected; previously it was absent from the table, so Superb
+  could not be chosen at all.
+
+### Added
+
+- **Hardware (HW) and software (SW) fields** in the Generate tab, plus a picker listing
+  every version known for the selected family.
+- Scope indicator showing how many observations the chosen version matches.
+- Per-byte confidence: a data-derived byte counts as verified only with at least 3
+  observations and at least 60 % agreement. Below that it is listed as unverified.
+- Mirror bytes inherit the confidence of the byte they are derived from.
+- 15 regression tests, including a real-world case: Skoda Superb III 2019
+  (`5Q0 614 517 DG`, HW H62, SW 0654). Previously 11 of its 47 bytes came from other
+  vehicles; the control unit rejected the coding. With the version entered, zero bytes
+  are wrong.
+
+### Notes
+
+Supplying the vehicle's current coding as a donor remains the safest route and now
+produces zero unverified bytes.
+
 ## [1.0.0-beta.2] — 2026-10-01
 
 Dataset expansion and source attribution.
@@ -69,6 +105,7 @@ First public pre-release.
 - Release binaries are self-signed; Windows SmartScreen still warns until a CA-issued
   certificate is in place.
 
-[Unreleased]: https://github.com/lepotane/VAG-ABS-Coding-Calculator/compare/v1-beta.2...HEAD
+[Unreleased]: https://github.com/lepotane/VAG-ABS-Coding-Calculator/compare/v1-beta.3...HEAD
+[1.0.0-beta.3]: https://github.com/lepotane/VAG-ABS-Coding-Calculator/compare/v1-beta.2...v1-beta.3
 [1.0.0-beta.2]: https://github.com/lepotane/VAG-ABS-Coding-Calculator/compare/v1-beta.1...v1-beta.2
 [1.0.0-beta.1]: https://github.com/lepotane/VAG-ABS-Coding-Calculator/releases/tag/v1-beta.1

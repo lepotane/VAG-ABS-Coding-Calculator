@@ -145,6 +145,28 @@ yukarıdaki sayılar her zaman veriyle karşılaştırılabilir:
   aslında kısmi bloklardı (`0000…`) ve gerçek kodlaması çok daha uzun modüllere
   aitlerdi. Bir bayt sayısı alt sınırı, ucuz ve etkili bir koruma.
 
+## Donanım ve yazılımı kaydedin
+
+`hardware` ve `software` alanları bir kaydı üretim için kullanışlı kılan iki alandır.
+
+Bir aile birçok kontrol ünitesi sürümünü kapsar ve bayt değerleri sürümler arasında
+değişir. Bu iki alan doldurulmazsa kayıt her sürümün istatistiğine katkı yapar ve
+"en sık değer" başka bir araca ait bir değerden gelebilir. Gerçek bir 2019 Skoda
+Superb III'te (`5Q0 614 517 DG`, HW H62, SW 0654) 47 baytın 11'i başka araçların
+kayıtlarından dolduruldu ve kontrol ünitesi kodu reddetti.
+
+Bu yüzden yeni kayıt eklerken:
+
+- **Kaynak belirtiyorsa `hardware` ve `software` alanlarını mutlaka doldurun.**
+- Yazımı aynen koruyun. `H62` ile `h62` farklı anahtarlardır; `0654` ile `654` de
+  farklı anahtarlardır.
+- Bilinmiyorsa tahmin etmeyin, `null` yazın. Eksik değer hiçbir şeyi daraltmaz; yanlış
+  değer ise kaydı ait olmadığı bir sürüme sokar.
+
+`statistics.filter_accounting` her sürüm için kaç kaydın eşleştiğini raporlar, Üret
+sekmesi de aynı sayıyı canlı gösterir. Bir veya iki kaydı olan sürüm üretimi
+destekleyemez — bu sessizce güvenilir sayılmak yerine doğrulanamayan olarak raporlanır.
+
 ## Kaynaklar
 
 Kaynaklar `source_registry` içinde bir kez tanımlanır ve `sources` dizisine yansıtılır:

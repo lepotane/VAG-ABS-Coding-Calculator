@@ -143,6 +143,28 @@ Two lessons worth keeping:
   were partial blocks (`0000…`), belonging to modules whose real coding is much longer.
   A minimum byte count is a cheap, effective guard.
 
+## Record the hardware and software
+
+`hardware` and `software` are what make a record useful for generation.
+
+One family covers many control-unit versions and the byte values differ between them.
+Without these two fields a record contributes to every version's statistics, and the
+"most common value" can then come from a different car. A real 2019 Skoda Superb III
+(`5Q0 614 517 DG`, HW H62, SW 0654) had 11 of its 47 bytes filled from other vehicles'
+recordings, and the control unit rejected the coding.
+
+So when adding a record:
+
+- **Always fill `hardware` and `software`** if the source states them.
+- Keep the exact strings. `H62` and `h62` are different keys; `0654` and `654` are
+  different keys.
+- Report unknown as `null` rather than guessing. A missing value narrows nothing; a
+  wrong one puts the record into a version it does not belong to.
+
+`statistics.filter_accounting` reports how many records matched each version, and the
+Generate tab shows the same number live. A version with only one or two records cannot
+support generation — that is reported as unverified rather than silently trusted.
+
 ## Sources
 
 Sources are declared once in `source_registry` and mirrored into the `sources` array:

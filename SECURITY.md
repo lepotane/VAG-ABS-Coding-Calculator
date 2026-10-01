@@ -4,8 +4,8 @@
 
 | Version | Supported |
 |---|---|
-| 1.0.0-beta.2 | Yes |
-| < 1.0.0-beta.2 | No |
+| 1.0.0-beta.3 | Yes |
+| < 1.0.0-beta.3 | No |
 
 ## Reporting a Vulnerability
 
@@ -53,8 +53,8 @@ must block a release.
 Release binaries are signed and timestamped. Verify before running:
 
 ```powershell
-Get-AuthenticodeSignature .\VAG-ABSCoder-Setup-1.0.0-beta.2.exe
-signtool verify /pa /v .\VAG-ABSCoder-Setup-1.0.0-beta.2.exe
+Get-AuthenticodeSignature .\VAG-ABSCoder-Setup-1.0.0-beta.3.exe
+signtool verify /pa /v .\VAG-ABSCoder-Setup-1.0.0-beta.3.exe
 ```
 
 An unexpected signer subject or a verification failure means the file was altered —

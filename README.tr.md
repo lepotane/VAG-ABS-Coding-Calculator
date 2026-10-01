@@ -26,7 +26,7 @@ bağlantısı gerekmez.
 
 ## Durum
 
-`v1-beta.2` — ön sürüm. Kaba kenarlar olabilir.
+`v1-beta.3` — ön sürüm. Kaba kenarlar olabilir.
 
 ## Sekmeler
 
@@ -61,8 +61,8 @@ gösterir.
 
 | Dosya | Açıklama |
 |---|---|
-| `VAG-ABSCoder-Setup-1.0.0-beta.2.exe` | Kurulum sihirbazı (önerilen) |
-| `VAG-ABSCoder-Portable-1.0.0-beta.2.exe` | Kurulum gerektirmez |
+| `VAG-ABSCoder-Setup-1.0.0-beta.3.exe` | Kurulum sihirbazı (önerilen) |
+| `VAG-ABSCoder-Portable-1.0.0-beta.3.exe` | Kurulum gerektirmez |
 
 Dosyalar dijital olarak imzalı ve zaman damgalıdır. Ön sürümlerde Windows
 SmartScreen uyarısı verebilir — *Diğer bilgiler → Yine de çalıştır* seçin.
